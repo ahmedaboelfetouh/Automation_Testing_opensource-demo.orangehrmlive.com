@@ -42,5 +42,17 @@ public class AdminPageTest extends BaseTest {
         editObj.setEmployeeConfirmPassword("Aya@12345");
         editObj.clickOnSaveButton();
     }
+
+
+    @Test
+    public void deleteUserTestCase(){
+        LoginPage logObj = new LoginPage(driver);
+        logObj.Login("Admin","admin123");
+
+        AdminPage adminObj = new AdminPage(driver);
+        adminObj.clickOnAdminButton();
+        adminObj.clickOnDeleteButton();
+    }
+
 }
 
