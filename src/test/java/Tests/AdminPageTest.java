@@ -1,0 +1,46 @@
+package Tests;
+
+import Base.BaseTest;
+import Pages.AdminPage;
+import Pages.EditUserPage;
+import Pages.LoginPage;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class AdminPageTest extends BaseTest {
+
+    @Test
+    public void addUserTestCase(){
+        LoginPage logObj = new LoginPage(driver);
+        logObj.Login("Admin","admin123");
+
+        AdminPage adminObj = new AdminPage(driver);
+        adminObj.clickOnAdminButton();
+        adminObj.cliCkOnAddButton();
+        adminObj.selectUserRole();
+        adminObj.selectStatusAsEnabled();
+        adminObj.setEmployeeName("Besant Technologies");
+        adminObj.setUserName("ayaali");
+        adminObj.setEmployeePassword("Aya@12345");
+        adminObj.setEmployeeConfirmPassword("Aya@12345");
+        adminObj.clickOnSaveButton();
+    }
+
+
+    @Test
+    public void editUserTestCase(){
+        LoginPage logObj = new LoginPage(driver);
+        logObj.Login("Admin","admin123");
+
+        AdminPage adminObj = new AdminPage(driver);
+        adminObj.clickOnAdminButton();
+        adminObj.clickOnEditFun();
+
+        EditUserPage editObj = new EditUserPage(driver);
+        editObj.clickOnCheckbox();
+        editObj.setEmployeePassword("Aya@12345");
+        editObj.setEmployeeConfirmPassword("Aya@12345");
+        editObj.clickOnSaveButton();
+    }
+}
+

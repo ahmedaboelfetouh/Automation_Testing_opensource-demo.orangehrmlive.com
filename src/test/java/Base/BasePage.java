@@ -13,12 +13,18 @@ public class BasePage {
    public static WebDriverWait wait ;
 
    public BasePage(WebDriver driver){
+        BasePage.driver = driver;
         PageFactory.initElements(driver ,this);
-        wait =new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public static void WaitingForElement(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
+
+    }
+
+    public static void WaitingForElement2(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
 }
