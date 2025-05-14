@@ -1,20 +1,27 @@
-package Tests;
+package Base;
 
-import Pages.BasePage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
     public WebDriver driver = BasePage.driver;
+    public ChromeOptions options;
+
     @BeforeClass
     public  void Setup(){
-    driver = new ChromeDriver();
-    driver.manage().window().maximize();
 
+        options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--incognito");
+        options.addArguments("--ignore-certificate-errors");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
     }
 
     @BeforeMethod
