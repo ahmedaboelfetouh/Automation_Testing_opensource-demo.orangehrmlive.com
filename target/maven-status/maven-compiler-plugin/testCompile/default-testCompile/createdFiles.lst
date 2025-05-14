@@ -1,0 +1,7 @@
+hook\Hooks.class
+stepdefinitions\LoginSteps.class
+Pages\LoginPage.class
+Pages\BasePage.class
+Tests\LoginTest.class
+runner\TestRunner.class
+Tests\BaseTest.class
