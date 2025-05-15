@@ -56,12 +56,12 @@ public class RecruitmentPage extends BasePage
 
 
     public void ClickOnRecruitmentButton(){
-        BasePage.WaitingForElement(RecruitmentButton);
+        BasePage.WaitingForElementToBeVisible(RecruitmentButton);
         RecruitmentButton.click();
     }
     public void SetJobTitle(String jobTitle)
     {
-        BasePage.WaitingForElement(JobTitle);
+        BasePage.WaitingForElementToBeVisible(JobTitle);
         JobTitle.click();
 
         JobTitle.sendKeys(jobTitle);
@@ -69,56 +69,56 @@ public class RecruitmentPage extends BasePage
 
     public void SetVacancy(String vacancy)
     {
-        BasePage.WaitingForElement(Vacancy);
+        BasePage.WaitingForElementToBeVisible(Vacancy);
 
         Vacancy.sendKeys(vacancy);
     }
 
     public void SetHiringManager(String hiringManager)
     {
-        BasePage.WaitingForElement(HiringManager);
+        BasePage.WaitingForElementToBeVisible(HiringManager);
 
         HiringManager.sendKeys(hiringManager);
     }
 
     public void SetStatus(String status)
     {
-        BasePage.WaitingForElement(Status);
+        BasePage.WaitingForElementToBeVisible(Status);
 
         Status.sendKeys(status);
     }
 
     public void SetCandidateName(String candidateName)
     {
-        BasePage.WaitingForElement(CandidateName);
+        BasePage.WaitingForElementToBeVisible(CandidateName);
 
         CandidateName.sendKeys(candidateName);
     }
 
     public void SetKeywords(String keywords)
     {
-        BasePage.WaitingForElement(Keywords);
+        BasePage.WaitingForElementToBeVisible(Keywords);
 
         Keywords.sendKeys(keywords);
     }
 
     public void SetFromDate(String fromDate)
     {
-        BasePage.WaitingForElement(FromDate);
+        BasePage.WaitingForElementToBeVisible(FromDate);
 
         FromDate.sendKeys(fromDate);
     }
 
     public void SetToDate(String toDate)
     {
-        BasePage.WaitingForElement(ToDate);
+        BasePage.WaitingForElementToBeVisible(ToDate);
 
         ToDate.sendKeys(toDate);
     }
 
     public void SetMethodOfApplication(String method)
     {
-        BasePage.WaitingForElement(MethodOfApplication);
+        BasePage.WaitingForElementToBeVisible(MethodOfApplication);
 
         MethodOfApplication.sendKeys(method);
     }
@@ -135,7 +135,7 @@ public class RecruitmentPage extends BasePage
 
     public String CheckRecordsVisibility()
     {
-        BasePage.WaitingForElement(RecordsFound);
+        BasePage.WaitingForElementToBeVisible(RecordsFound);
         RecordsFound.isDisplayed();
         String RecordsWord = RecordsFound.getText();
         return RecordsWord;
