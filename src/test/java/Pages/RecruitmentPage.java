@@ -56,12 +56,12 @@ public class RecruitmentPage extends BasePage
 
 
     public void ClickOnRecruitmentButton(){
-        BasePage.WaitingForElementToBeVisible(RecruitmentButton);
+        BasePage.WaitingForElement(RecruitmentButton);
         RecruitmentButton.click();
     }
     public void SetJobTitle(String jobTitle)
     {
-        BasePage.WaitingForElementToBeVisible(JobTitle);
+        BasePage.WaitingForElement(JobTitle);
         JobTitle.click();
 
         JobTitle.sendKeys(jobTitle);
