@@ -2,7 +2,7 @@ package Tests;
 
 import Base.BaseTest;
 import Pages.BuzzPage;
-import Pages.LoginPage;
+import Pages.LogInOutPage;
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 
@@ -16,7 +16,7 @@ public class BuzzTest extends BaseTest {
 
     @Test
     public void postPost(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
@@ -26,7 +26,7 @@ public class BuzzTest extends BaseTest {
     }
     @Test
     public void likePost(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
@@ -34,7 +34,7 @@ public class BuzzTest extends BaseTest {
     }
     @Test
     public void addComment(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
@@ -44,7 +44,7 @@ public class BuzzTest extends BaseTest {
     @Test()
     public void editComment(){
 
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
@@ -54,7 +54,7 @@ public class BuzzTest extends BaseTest {
     }
     @Test()
     public void likeComment(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
@@ -64,7 +64,7 @@ public class BuzzTest extends BaseTest {
     }
     @Test()
     public void deleteComment(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
         BuzzPage buzzPage = new BuzzPage(driver);
         buzzPage.clickOnBuzzTab();
