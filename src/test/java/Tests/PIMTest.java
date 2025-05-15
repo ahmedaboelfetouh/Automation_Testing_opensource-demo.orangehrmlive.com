@@ -2,7 +2,7 @@ package Tests;
 
 import Base.BaseTest;
 import Pages.AddUserPIMPage;
-import Pages.LoginPage;
+import Pages.LogInOutPage;
 import Pages.PIMPage;
 import org.testng.annotations.Test;
 
@@ -10,7 +10,7 @@ public class PIMTest extends BaseTest {
 
     @Test
     public void addUserPIMTestCase(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
 
         PIMPage pimObj = new PIMPage(driver);
@@ -28,7 +28,7 @@ public class PIMTest extends BaseTest {
 
     @Test
     public void searchForEmployee(){
-        LoginPage logObj = new LoginPage(driver);
+        LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
 
         PIMPage pimObj = new PIMPage(driver);

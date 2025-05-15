@@ -2,35 +2,49 @@ package Tests;
 
 import Base.BaseTest;
 import Pages.TimePage;
-import Pages.LoginPage;
+import Pages.LogInOutPage;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class TimeTest extends BaseTest {
+
+    @Test(dependsOnMethods = "PunchInTest")
+    public void PunchOutTest(){
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch Out Test in Time Module");
+        TimePage time = new TimePage(driver);
+        time.OpenTimeModule();
+        time.OpenAttendanceMenu();
+        time.OpenPunchInOutModule();
+        time.SetPunchOutData();
+        time.SubmitPunchOut();
+        logger.debug("Time module ➡\uFE0F ✅✅✅ Punch out Test Completed Successfully");
+    }
+
+    @AfterMethod
+    public void Logout(){
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
+        LogInOutPage login = new LogInOutPage(driver);
+        login.Logout();
+        logger.debug("Time module ➡\uFE0F ✅✅✅ Logout Completed");
+    }
 
     @BeforeMethod
     public void Login(){
         logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Start Login");
-        LoginPage login = new LoginPage(driver);
+        LogInOutPage login = new LogInOutPage(driver);
         login.Login("Admin","admin123");
         logger.debug("Time module ➡\uFE0F ✅✅✅ Login Completed");
     }
 
     @Test
-    public void PunchInOutTest(){
-        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch In/Out Test in Time Module");
+    public void PunchInTest(){
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch In Test in Time Module");
         TimePage time = new TimePage(driver);
         time.OpenTimeModule();
         time.OpenAttendanceMenu();
         time.OpenPunchInOutModule();
-        logger.debug("Time module ➡\uFE0F ✅✅✅ Punch In/out Test Completed Successfully");
-    }
-    @Test
-    public void ViewAttendanceRecordsTest(String username,String password){
-        logger.info("\uD83D\uDE80 \uD83D\uDE80 \uD83D\uDE80 Starting Invalid Login Test");
-
-
-        logger.debug("✅✅✅ Invalid Login Test Completed Successfully");
+        time.SetPunchInData();
+        time.SubmitPunchIn();
+        logger.debug("Time module ➡\uFE0F ✅✅✅ Punch In Test Completed Successfully");
     }
 }

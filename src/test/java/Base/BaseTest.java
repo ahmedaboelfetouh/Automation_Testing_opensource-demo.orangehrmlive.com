@@ -10,6 +10,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.CookiePolicy;
+
 public class BaseTest {
     protected WebDriver driver = BasePage.driver;
     protected ChromeOptions options;
@@ -23,21 +25,21 @@ public class BaseTest {
         options.addArguments("--ignore-certificate-errors");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
+        logger.info("✅ Driver Setup Successfully");
+        logger.info("✅ Browser Opened Successfully Successfully");
         //driver.manage().window().maximize();
     }
 
     @BeforeMethod
     public void OpenUrl(){
         driver.get("https://opensource-demo.orangehrmlive.com");
+        logger.info("✅ Navigated to the site successfully");
     }
 
-//    @AfterClass
-//    public void CloseBrowser(){
-//        driver.quit();
-//    }
-
-//    @BeforeMethod
-//    public void ClearCookies(){
-//        driver.manage().deleteAllCookies();
-//    }
+    @AfterClass
+    public void CloseBrowser(){
+        driver.manage().deleteAllCookies();
+        driver.quit();
+        logger.info("✅ Browser Closed Successfully");
+    }
 }

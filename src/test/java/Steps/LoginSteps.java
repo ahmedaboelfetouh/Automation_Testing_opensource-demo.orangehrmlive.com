@@ -1,18 +1,15 @@
 package Steps;
 
-import Pages.LoginPage;
+import Pages.LogInOutPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import static Steps.Hooks.driver;
 
 public class LoginSteps {
     WebDriver driver = Hooks.driver;
-    LoginPage loginpage = new LoginPage(driver);
+    LogInOutPage loginpage = new LogInOutPage(driver);
     @Given("user in login page")
     public void user_in_login_page() {
         System.out.println("User is on the login page");
