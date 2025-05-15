@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import static org.testng.AssertJUnit.assertEquals;
+
 
 public class LoginPage extends BasePage {
     WebDriverWait wait = BasePage.wait;
@@ -23,8 +25,11 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     WebElement LoginButton;
 
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6")
+    WebElement HomePageLabel;
+
     public void SetUserName(String username){
-        BasePage.WaitingForElement(Username);
+        BasePage.WaitingForElementToBeVisible(Username);
         Username.clear();
         Username.sendKeys(username);
     }
@@ -43,5 +48,7 @@ public class LoginPage extends BasePage {
         SetUserName(username);
         SetPassword(password);
         ClickButton();
+        BasePage.WaitingForElementToBeVisible(HomePageLabel);
+        assertEquals(HomePageLabel.getText(), "Dashboard");
     }
 }

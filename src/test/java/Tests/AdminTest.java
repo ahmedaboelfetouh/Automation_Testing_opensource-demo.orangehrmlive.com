@@ -4,10 +4,9 @@ import Base.BaseTest;
 import Pages.AdminPage;
 import Pages.EditUserPage;
 import Pages.LoginPage;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class AdminPageTest extends BaseTest {
+public class AdminTest extends BaseTest {
 
     @Test
     public void addUserTestCase(){

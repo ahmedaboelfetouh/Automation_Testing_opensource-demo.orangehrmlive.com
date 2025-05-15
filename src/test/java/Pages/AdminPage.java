@@ -17,7 +17,7 @@ public class AdminPage extends BasePage {
     private WebElement adminButton;
 
     public void clickOnAdminButton(){
-        BasePage.WaitingForElement(adminButton);
+        BasePage.WaitingForElementToBeVisible(adminButton);
         adminButton.click();
     }
 
@@ -25,7 +25,7 @@ public class AdminPage extends BasePage {
     WebElement addButton;
 
     public void cliCkOnAddButton(){
-        BasePage.WaitingForElement(addButton);
+        BasePage.WaitingForElementToBeVisible(addButton);
         addButton.click();
     }
 
@@ -36,7 +36,7 @@ public class AdminPage extends BasePage {
     private WebElement userRoleOptionAdmin;
 
     public void selectUserRole() {
-        BasePage.WaitingForElement(userRoleDropdown);
+        BasePage.WaitingForElementToBeVisible(userRoleDropdown);
         userRoleDropdown.click();
         userRoleOptionAdmin.click();
     }
@@ -93,7 +93,7 @@ public class AdminPage extends BasePage {
     private WebElement editButton;
 
     public void clickOnEditFun(){
-        BasePage.WaitingForElement(editButton);
+        BasePage.WaitingForElementToBeVisible(editButton);
         editButton.click();
         //BasePage.WaitingForElement(driver.findElement(By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > h6")));
     }
@@ -103,7 +103,7 @@ public class AdminPage extends BasePage {
     private WebElement deleteButton;
 
     public void clickOnDeleteButton(){
-        BasePage.WaitingForElement2(deleteButton);
+        BasePage.WaitingForElementToBeClickable(deleteButton);
         deleteButton.click();
     }
 

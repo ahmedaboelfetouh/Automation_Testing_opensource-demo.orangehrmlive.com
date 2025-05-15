@@ -27,12 +27,12 @@ public class LoginTest extends BaseTest {
         LoginPage login = new LoginPage(driver);
         login.Login("Admin","admin123");
         logger.debug("✅✅✅ Login Test Completed Successfully");
-
     }
     @Test(dataProvider = "LoginData")
     public void LoginWIthDifferData(String username,String password){
-        logger.info("\uD83D\uDE80 \uD83D\uDE80 \uD83D\uDE80 Starting Login Test");
+        logger.info("\uD83D\uDE80 \uD83D\uDE80 \uD83D\uDE80 Starting Invalid Login Test");
         LoginPage login = new LoginPage(driver);
         login.Login(username, password);
+        logger.debug("✅✅✅ Invalid Login Test Completed Successfully");
     }
 }
