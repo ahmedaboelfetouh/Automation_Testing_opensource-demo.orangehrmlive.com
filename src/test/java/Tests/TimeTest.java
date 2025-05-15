@@ -47,6 +47,4 @@ public class TimeTest extends BaseTest {
         login.Login("Admin","admin123");
         logger.debug("Time module ➡\uFE0F ✅✅✅ Login Completed");
     }
-
-   
 }

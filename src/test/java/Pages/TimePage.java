@@ -1,13 +1,11 @@
 package Pages;
 
 import Base.BasePage;
-import org.apache.commons.lang3.ObjectUtils;
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import static org.testng.AssertJUnit.assertEquals;
 
 public class TimePage extends BasePage {
@@ -51,7 +49,6 @@ public class TimePage extends BasePage {
         BasePage.WaitingForElementToBeVisible(TimeModuleLabel);
         assertEquals("Time",TimeModuleLabel.getText());
         logger.debug("Time module ➡\uFE0F ✅ Time Module is Opened Successfully");
-
     }
     public void OpenAttendanceMenu(){
         WaitingForElementToBeClickable(AttendaceDropDownMenu);
