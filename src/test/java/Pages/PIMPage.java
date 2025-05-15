@@ -71,5 +71,13 @@ public class PIMPage extends BasePage {
         searchButton.click();
     }
 
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(9) > div > button:nth-child(1)")
+    private WebElement editButton;
+
+    public void clickOnEditButton(){
+        BasePage.WaitingForElementToBeClickable(editButton);
+        editButton.click();
+    }
+
 }
 
