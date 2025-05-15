@@ -8,12 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class LoginPage extends BasePage {
+public class LogInOutPage extends BasePage {
     WebDriverWait wait = BasePage.wait;
 
-    public LoginPage(WebDriver driver){
+    public LogInOutPage(WebDriver driver){
         super(driver);
-
     }
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")
@@ -28,6 +27,22 @@ public class LoginPage extends BasePage {
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6")
     WebElement HomePageLabel;
 
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-userarea > ul > li > span > i")
+    WebElement UserDropDownMenu;
+
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-userarea > ul > li > ul > li:nth-child(4) > a")
+    WebElement LogOutButton;
+
+    public void OpenUserDropDownMenu(){
+        WaitingForElementToBeClickable(UserDropDownMenu);
+        UserDropDownMenu.click();
+    }
+
+    public void LogOutSubmit(){
+        WaitingForElementToBeClickable(LogOutButton);
+        LogOutButton.click();
+    }
+
     public void SetUserName(String username){
         BasePage.WaitingForElementToBeVisible(Username);
         Username.clear();
@@ -40,7 +55,6 @@ public class LoginPage extends BasePage {
     }
 
     public void ClickButton(){
-
         LoginButton.click();
     }
 
@@ -50,5 +64,10 @@ public class LoginPage extends BasePage {
         ClickButton();
         BasePage.WaitingForElementToBeVisible(HomePageLabel);
         assertEquals(HomePageLabel.getText(), "Dashboard");
+    }
+
+    public void Logout(){
+        OpenUserDropDownMenu();
+        LogOutSubmit();
     }
 }
