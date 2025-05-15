@@ -15,7 +15,7 @@ public class AddUserPIMPage extends BasePage {
     private WebElement firstName;
 
     public void setFirstName(String name){
-        BasePage.WaitingForElement(firstName);
+        BasePage.WaitingForElementToBeVisible(firstName);
         firstName.sendKeys(name);
     }
 
@@ -23,7 +23,7 @@ public class AddUserPIMPage extends BasePage {
     private WebElement middleName;
 
     public void setMiddleName(String name){
-        BasePage.WaitingForElement(middleName);
+        BasePage.WaitingForElementToBeVisible(middleName);
         firstName.sendKeys(name);
     }
 
@@ -31,7 +31,7 @@ public class AddUserPIMPage extends BasePage {
     private WebElement lastName;
 
     public void setLastName(String name){
-        BasePage.WaitingForElement(lastName);
+        BasePage.WaitingForElementToBeVisible(lastName);
         firstName.sendKeys(name);
     }
 
@@ -99,7 +99,7 @@ public class AddUserPIMPage extends BasePage {
     private WebElement saveButton;
 
     public void clickOnSaveButton(){
-        BasePage.WaitingForElement(saveButton);
+        BasePage.WaitingForElementToBeVisible(saveButton);
         saveButton.submit();
     }
 }

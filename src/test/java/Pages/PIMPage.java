@@ -19,7 +19,7 @@ public class PIMPage extends BasePage {
     private WebElement pimButtom;
 
     public void clickOnPIMButton(){
-        BasePage.WaitingForElement(pimButtom);
+        BasePage.WaitingForElementToBeVisible(pimButtom);
         pimButtom.click();
     }
 
@@ -27,7 +27,7 @@ public class PIMPage extends BasePage {
     private WebElement addUserButton;
 
     public void clickOnAddUserButton(){
-        BasePage.WaitingForElement(addUserButton);
+        BasePage.WaitingForElementToBeVisible(addUserButton);
         addUserButton.click();
     }
 
@@ -43,7 +43,7 @@ public class PIMPage extends BasePage {
 
     public void setEmployeeNameSearch(String value) {
         searchData = value.toLowerCase();
-        BasePage.WaitingForElement(employeeNameSearch);
+        BasePage.WaitingForElementToBeVisible(employeeNameSearch);
         employeeNameSearch.clear();
         employeeNameSearch.sendKeys(value);
         System.out.println("Before Search: " + resultEmployees.size());
@@ -67,7 +67,7 @@ public class PIMPage extends BasePage {
     }
 
     public void clickOnSearchButton() {
-        BasePage.WaitingForElement(searchButton);
+        BasePage.WaitingForElementToBeVisible(searchButton);
         searchButton.click();
     }
 

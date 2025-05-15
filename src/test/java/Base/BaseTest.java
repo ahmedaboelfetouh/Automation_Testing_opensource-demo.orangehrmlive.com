@@ -31,13 +31,13 @@ public class BaseTest {
         driver.get("https://opensource-demo.orangehrmlive.com");
     }
 
-    @AfterClass
-    public void CloseBrowser(){
-        driver.quit();
-    }
+//    @AfterClass
+//    public void CloseBrowser(){
+//        driver.quit();
+//    }
 
-    @BeforeMethod
-    public void ClearCookies(){
-        driver.manage().deleteAllCookies();
-    }
+//    @BeforeMethod
+//    public void ClearCookies(){
+//        driver.manage().deleteAllCookies();
+//    }
 }

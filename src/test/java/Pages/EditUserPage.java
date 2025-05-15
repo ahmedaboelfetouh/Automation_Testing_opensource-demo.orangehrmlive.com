@@ -26,7 +26,7 @@ public class EditUserPage extends BasePage {
 
 
     public void selectUserRole() {
-        BasePage.WaitingForElement(userRoleDropdown);
+        BasePage.WaitingForElementToBeVisible(userRoleDropdown);
         userRoleDropdown.click();
         userRoleOptionAdmin.click();
     }
@@ -60,7 +60,7 @@ public class EditUserPage extends BasePage {
     private WebElement checkbox;
 
     public void clickOnCheckbox(){
-        BasePage.WaitingForElement2(checkbox);
+        BasePage.WaitingForElementToBeClickable(checkbox);
         checkbox.click();
     }
 

@@ -6,7 +6,7 @@ import Pages.LoginPage;
 import Pages.PIMPage;
 import org.testng.annotations.Test;
 
-public class PIMPageTest extends BaseTest {
+public class PIMTest extends BaseTest {
 
     @Test
     public void addUserPIMTestCase(){
