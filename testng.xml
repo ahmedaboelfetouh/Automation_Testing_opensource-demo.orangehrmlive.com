@@ -9,6 +9,11 @@
                     <include name="LoginWIthDifferData"/>
                 </methods>
             </class>
+            <class name="Tests.RecruitmentPageTest">
+                <methods>
+                    <include name="InvalidSearchCandidateTestCase"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
