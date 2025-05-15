@@ -2,7 +2,7 @@ package Tests;
 
 import Base.BaseTest;
 import Pages.RecruitmentPage;
-import Pages.LogInOutPage;
+import Pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,7 @@ public class RecruitmentPageTest extends BaseTest
     public void InvalidSearchCandidateTestCase()
     {
         logger.info("Recruitment Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Start Login");
-        LogInOutPage logObj = new LogInOutPage(driver);
+        LoginPage logObj = new LoginPage(driver);
         logObj.Login("Admin","admin123");
 
         RecruitmentPage RecruitmentObj = new RecruitmentPage(driver);

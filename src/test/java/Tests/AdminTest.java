@@ -3,14 +3,14 @@ package Tests;
 import Base.BaseTest;
 import Pages.AdminPage;
 import Pages.EditUserPage;
-import Pages.LogInOutPage;
+import Pages.LoginPage;
 import org.testng.annotations.Test;
 
 public class AdminTest extends BaseTest {
 
     @Test
     public void addUserTestCase(){
-        LogInOutPage logObj = new LogInOutPage(driver);
+        LoginPage logObj = new LoginPage(driver);
         logObj.Login("Admin","admin123");
 
         AdminPage adminObj = new AdminPage(driver);
@@ -28,7 +28,7 @@ public class AdminTest extends BaseTest {
 
     @Test
     public void editUserTestCase(){
-        LogInOutPage logObj = new LogInOutPage(driver);
+        LoginPage logObj = new LoginPage(driver);
         logObj.Login("Admin","admin123");
 
         AdminPage adminObj = new AdminPage(driver);
@@ -45,7 +45,7 @@ public class AdminTest extends BaseTest {
 
     @Test
     public void deleteUserTestCase(){
-        LogInOutPage logObj = new LogInOutPage(driver);
+        LoginPage logObj = new LoginPage(driver);
         logObj.Login("Admin","admin123");
 
         AdminPage adminObj = new AdminPage(driver);
