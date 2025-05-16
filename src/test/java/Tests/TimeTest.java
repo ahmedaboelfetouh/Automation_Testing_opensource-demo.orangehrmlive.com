@@ -1,3 +1,15 @@
+/******************************************************************************
+ *
+ * Module: Time
+ *
+ * File Name: TimeTest.java
+ *
+ * Description: Test for PunchIn Feature for Time Module
+ *              Test for PunchOut Feature for Time Module
+ *
+ * Author: Ahmed Aboelfetouh
+ *
+ *******************************************************************************/
 package Tests;
 
 import Base.BaseTest;
@@ -10,7 +22,7 @@ public class TimeTest extends BaseTest {
 
      @Test
     public void PunchInTest(){
-        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch In Test in Time Module");
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch In Test");
         TimePage time = new TimePage(driver);
         time.OpenTimeModule();
         time.OpenAttendanceMenu();
@@ -22,7 +34,7 @@ public class TimeTest extends BaseTest {
     
     @Test
     public void PunchOutTest(){
-        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch Out Test in Time Module");
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch Out Test");
         TimePage time = new TimePage(driver);
         time.OpenTimeModule();
         time.OpenAttendanceMenu();

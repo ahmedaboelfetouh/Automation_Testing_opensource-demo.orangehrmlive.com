@@ -1,3 +1,15 @@
+/******************************************************************************
+ *
+ * Module: Performance
+ *
+ * File Name: PerformanceTest.java
+ *
+ * Description: Test for Add APK Feature for Performance Module
+ *              Test for Search for a created APK Feature for Performance Module
+ *
+ * Author: Ahmed Aboelfetouh
+ *
+ *******************************************************************************/
 package Tests;
 
 
@@ -12,7 +24,7 @@ public class PerformanceTest extends BaseTest {
 
     @Test
     public void AddAPKTest(){
-        logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Add APK Test in Performance Module");
+        logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Add APK Test");
         PerformancePage performance = new PerformancePage(driver);
         performance.OpenPerformanceModule();
         performance.OpenConfigureKPI();
@@ -22,7 +34,7 @@ public class PerformanceTest extends BaseTest {
 
     @Test
     public void SearchforKPITest(){
-        logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting for KPI Test in Performance Module");
+        logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting for KPI Test");
         PerformancePage performance = new PerformancePage(driver);
         performance.OpenPerformanceModule();
         performance.OpenConfigureKPI();

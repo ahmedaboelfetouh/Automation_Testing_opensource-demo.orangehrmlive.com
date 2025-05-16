@@ -1,8 +1,17 @@
+/******************************************************************************
+ *
+ * Module: Performance
+ *
+ * File Name: PerformancePage.java
+ *
+ * Description: Functions and Locators for Add/Search for APK Feature for Performance Module
+ *
+ * Author: Ahmed Aboelfetouh
+ *
+ *******************************************************************************/
 package Pages;
 
 import Base.BasePage;
-
-
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,6 +69,7 @@ public class PerformancePage extends BasePage {
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(3) > div")
     WebElement JobTitleLabel;
 
+
     public void OpenPerformanceModule(){
         WaitingForElementToBeVisible(PerformanceModule);
         PerformanceModule.click();
@@ -108,6 +118,4 @@ public class PerformancePage extends BasePage {
         assertEquals("QA Engineer",JobTitleLabel.getText());
         logger.debug("Performance module ➡\uFE0F ✅ Search is Done Successfully");
     }
-
-
 }

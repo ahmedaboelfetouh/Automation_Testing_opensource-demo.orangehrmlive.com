@@ -1,3 +1,14 @@
+/******************************************************************************
+ *
+ * Module: Time
+ *
+ * File Name: TimePage.java
+ *
+ * Description: Functions and Locators for PunchIn/Out Feature for Time Module
+ *
+ * Author: Ahmed Aboelfetouh
+ *
+ *******************************************************************************/
 package Pages;
 
 import Base.BasePage;
