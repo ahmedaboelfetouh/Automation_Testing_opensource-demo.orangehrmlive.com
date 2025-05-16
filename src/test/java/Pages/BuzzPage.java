@@ -10,8 +10,8 @@ public class BuzzPage extends BasePage {
     public BuzzPage(WebDriver driver) {
         super(driver);
     }
- @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[12]/a")
-private WebElement buzzTab;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[12]/a")
+    private WebElement buzzTab;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div[1]/div[2]/form/div/textarea")
     private WebElement postTextField;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div[1]/div[2]/form/div/div/button")
@@ -28,12 +28,12 @@ private WebElement buzzTab;
     private WebElement deleteCommentButton;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[4]/div[2]/div[2]/div[2]/p[1]")
     private WebElement likComment;
-   public void clickOnBuzzTab(){
+    public void clickOnBuzzTab(){
 
-           BasePage.WaitingForElementToBeVisible(buzzTab);
-           buzzTab.click();
+        BasePage.WaitingForElementToBeVisible(buzzTab);
+        buzzTab.click();
 
-   }
+    }
     public void writePost(String post){
         BasePage.WaitingForElementToBeVisible(postTextField);
         postTextField.sendKeys(post);
@@ -55,17 +55,17 @@ private WebElement buzzTab;
         commentTextField.sendKeys(comment+ Keys.ENTER);
     }
     public void editeComment( String newComment){
-       // BasePage.WaitingForElementToBeVisible(editComment);
+        BasePage.WaitingForElementToBeVisible(editComment);
         editComment.click();
         commentTextField.clear();
         addComment(newComment);
     }
     public void likeComment(){
-       // BasePage.WaitingForElementToBeVisible(likComment);
+        BasePage.WaitingForElementToBeVisible(likComment);
         likComment.click();
     }
     public void deleteComment(){
-       // BasePage.WaitingForElementToBeVisible(deleteCommentButton);
+        BasePage.WaitingForElementToBeVisible(deleteCommentButton);
         deleteCommentButton.click();
 
     }
