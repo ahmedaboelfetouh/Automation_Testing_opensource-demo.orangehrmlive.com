@@ -54,37 +54,55 @@ public class AdminPage extends BasePage {
 
     @FindBy(xpath = "//input[@placeholder=\"Type for hints...\"]")
     private WebElement employeeName;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Daniel Thomas Anderson']")
+    private WebElement employeeNameOption;
 
-    public void setEmployeeName(String name){
-        employeeName.sendKeys(name);
+    public void setEmployeeName(){
+        BasePage.WaitingForElementToBeVisible(employeeName);
+        employeeName.sendKeys("Daniel");
+        BasePage.WaitingForElementToBeClickable(employeeNameOption);
+        employeeNameOption.click();
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input")
     private  WebElement userName;
 
     public void setUserName(String name){
+        BasePage.WaitingForElementToBeVisible(userName);
         userName.sendKeys(name);
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input")
     private WebElement employeePassword;
 
-    public void setEmployeePassword(String password){
+    public void setEmployeePassword(String password)
+    {
+        BasePage.WaitingForElementToBeVisible(employeePassword);
         employeePassword.sendKeys(password);
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div:nth-child(2) > div > div:nth-child(2) > input")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input")
     private WebElement employeeConfirmPassword;
 
     public void setEmployeeConfirmPassword(String password){
-        employeePassword.sendKeys(password);
+        BasePage.WaitingForElementToBeVisible(employeeConfirmPassword);
+        employeeConfirmPassword.sendKeys(password);
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
     private WebElement saveButton;
 
     public void clickOnSaveButton(){
+        BasePage.WaitingForElementToBeClickable(saveButton);
         saveButton.submit();
+    }
+
+
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacation;
+
+    public void checkSaveVerification(){
+        System.out.println(saveButton.isDisplayed());
     }
 
     EditUserPage obj;
@@ -99,13 +117,28 @@ public class AdminPage extends BasePage {
     }
 
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(6) > div > button:nth-child(1)")
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(3) > div > div:nth-child(6) > div > button:nth-child(1)")
     private WebElement deleteButton;
 
     public void clickOnDeleteButton(){
         BasePage.WaitingForElementToBeClickable(deleteButton);
         deleteButton.click();
     }
+
+    @FindBy(css = "#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-header > p")
+    private WebElement deleteMessageVerification;
+    public void checkDeleteMessageVerification(){
+        BasePage.WaitingForElementToBeVisible(deleteMessageVerification);
+        System.out.println(deleteMessageVerification.isDisplayed());
+    }
+
+    @FindBy(css = "#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-footer > button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
+    private WebElement deleteButtonAlert;
+    public void clickOnDeleteButtonAlert(){
+        BasePage.WaitingForElementToBeClickable(deleteButtonAlert);
+        deleteButtonAlert.click();
+    }
+
 
 }
 

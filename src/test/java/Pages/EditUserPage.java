@@ -68,6 +68,7 @@ public class EditUserPage extends BasePage {
     private WebElement employeePassword;
 
     public void setEmployeePassword(String password){
+        BasePage.WaitingForElementToBeVisible(employeePassword);
         employeePassword.sendKeys(password);
     }
 
@@ -75,11 +76,19 @@ public class EditUserPage extends BasePage {
     private WebElement employeeConfirmPassword;
 
     public void setEmployeeConfirmPassword(String password){
-        employeePassword.sendKeys(password);
+        BasePage.WaitingForElementToBeVisible(employeeConfirmPassword);
+        employeeConfirmPassword.sendKeys(password);
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
     private WebElement saveButton;
+
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacation;
+
+    public void checkSaveVerification(){
+        System.out.println(saveButton.isDisplayed());
+    }
 
     public void clickOnSaveButton(){
         saveButton.submit();
