@@ -15,7 +15,6 @@ public class RecruitmentPageTest extends BaseTest
         logger.info("Recruitment Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Start Login For Invalid Search Candidate TestCase");
         LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
-
         RecruitmentPage RecruitmentObj = new RecruitmentPage(driver);
         RecruitmentObj.ClickOnRecruitmentButton();
         RecruitmentObj.SearchForCandidate( "","","2025-20-05", "2025-27-05");

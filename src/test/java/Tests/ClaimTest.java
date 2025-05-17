@@ -17,6 +17,8 @@ import Pages.LogInOutPage;
 import Pages.ClaimPage;
 import org.testng.annotations.*;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 public class ClaimTest extends BaseTest{
 
     @Test
@@ -26,7 +28,9 @@ public class ClaimTest extends BaseTest{
         claim.OpenClaimModule();
         claim.OpenAssignClaim();
         claim.EnterAssignClaimData();
+        assertEquals("Success",claim.SuccessMessage());
         claim.SubmitClaim();
+        assertEquals("Success",claim.SuccessMessage());
         logger.debug("Claim module ➡\uFE0F ✅✅✅ Assign Claim Test Completed Successfully");
     }
 

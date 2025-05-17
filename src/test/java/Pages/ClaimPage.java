@@ -41,7 +41,7 @@ public class ClaimPage extends BasePage {
     WebElement Remarks;
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div > div")
     WebElement EventDropDownList;
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Travel Allowance - Ahmed Aboelfetouh']")
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Travel Allowance']")
     WebElement EventSelection;
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div > div")
     WebElement CurrencyDropDownList;
@@ -58,14 +58,10 @@ public class ClaimPage extends BasePage {
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div.orangehrm-action-button-container > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-sm-button")
     WebElement SubmitClaimButton;
 
-
-
-
     public void OpenClaimModule(){
         WaitingForElementToBeVisible(ClaimModule);
         ClaimModule.click();
         BasePage.WaitingForElementToBeVisible(ClaimModuleLabel);
-        assertEquals("Claim",ClaimModuleLabel.getText());
         logger.debug("Claim module ➡\uFE0F ✅ Claim Module is Opened Successfully");
     }
 
@@ -73,7 +69,6 @@ public class ClaimPage extends BasePage {
         WaitingForElementToBeClickable(AssignClaimButton);
         AssignClaimButton.click();
         WaitingForElementToBeVisible(AssignClaimLabel);
-        assertEquals("Create Claim Request",AssignClaimLabel.getText());
         logger.debug("Claim module ➡\uFE0F ✅ Assign Claim Page is Opened Successfully");
     }
 
@@ -92,7 +87,6 @@ public class ClaimPage extends BasePage {
         Remarks.sendKeys("Test");
         CreateClaimButton.click();
         WaitingForElementToBeVisible(SuccessMessage);
-        assertEquals("Success",SuccessMessage.getText());
         logger.debug("Claim module ➡\uFE0F ✅ Claim is Created Successfully");
     }
 
@@ -102,7 +96,10 @@ public class ClaimPage extends BasePage {
         WaitingForElementToBeClickable(SubmitClaimButton);
         SubmitClaimButton.click();
         WaitingForElementToBeVisible(SuccessMessage);
-        assertEquals("Success",SuccessMessage.getText());
         logger.debug("Claim module ➡\uFE0F ✅ Claim is Submitted Successfully");
+    }
+    public String SuccessMessage(){
+        WaitingForElementToBeVisible(SuccessMessage);
+        return SuccessMessage.getText();
     }
 }

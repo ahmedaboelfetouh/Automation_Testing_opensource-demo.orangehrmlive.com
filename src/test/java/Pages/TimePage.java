@@ -93,7 +93,6 @@ public class TimePage extends BasePage {
         PunchInButton.click();
         logger.debug("Time module ➡\uFE0F ✅ Punch In Button is Clicked Successfully");
         WaitingForElementToBeVisible(SuccessMessage);
-        assertEquals("Success",SuccessMessage.getText());
     }
 
     public void SubmitPunchOut(){
@@ -101,6 +100,10 @@ public class TimePage extends BasePage {
         PunchOutButton.click();
         logger.debug("Time module ➡\uFE0F ✅ Punch Out Button is Clicked Successfully");
         WaitingForElementToBeVisible(SuccessMessage);
-        assertEquals("Success",SuccessMessage.getText());
+    }
+
+    public String SuccessMessage(){
+        WaitingForElementToBeVisible(SuccessMessage);
+        return SuccessMessage.getText();
     }
 }

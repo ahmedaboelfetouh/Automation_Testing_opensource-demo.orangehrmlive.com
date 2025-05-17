@@ -18,9 +18,11 @@ import Pages.LogInOutPage;
 
 import org.testng.annotations.*;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 public class TimeTest extends BaseTest {
 
-     @Test
+    @Test(priority = 1)
     public void PunchInTest(){
         logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch In Test");
         TimePage time = new TimePage(driver);
@@ -29,10 +31,11 @@ public class TimeTest extends BaseTest {
         time.OpenPunchInOutModule();
         time.SetPunchInData();
         time.SubmitPunchIn();
+        assertEquals("Success",time.SuccessMessage());
         logger.debug("Time module ➡\uFE0F ✅✅✅ Punch In Test Completed Successfully");
     }
     
-    @Test
+    @Test(priority = 2)
     public void PunchOutTest(){
         logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Punch Out Test");
         TimePage time = new TimePage(driver);
@@ -41,6 +44,7 @@ public class TimeTest extends BaseTest {
         time.OpenPunchInOutModule();
         time.SetPunchOutData();
         time.SubmitPunchOut();
+        assertEquals("Success",time.SuccessMessage());
         logger.debug("Time module ➡\uFE0F ✅✅✅ Punch out Test Completed Successfully");
     }
 

@@ -29,10 +29,8 @@ public class BuzzPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[4]/div[2]/div[2]/div[2]/p[1]")
     private WebElement likComment;
     public void clickOnBuzzTab(){
-
         BasePage.WaitingForElementToBeVisible(buzzTab);
         buzzTab.click();
-
     }
     public void writePost(String post){
         BasePage.WaitingForElementToBeVisible(postTextField);

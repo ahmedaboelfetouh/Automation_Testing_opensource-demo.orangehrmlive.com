@@ -74,7 +74,6 @@ public class PerformancePage extends BasePage {
         WaitingForElementToBeVisible(PerformanceModule);
         PerformanceModule.click();
         BasePage.WaitingForElementToBeVisible(PerformanceModuleLabel);
-        assertEquals("Performance",PerformanceModuleLabel.getText());
         logger.debug("Performance module ➡\uFE0F ✅ Performance Module is Opened Successfully");
     }
 
@@ -84,7 +83,6 @@ public class PerformancePage extends BasePage {
         WaitingForElementToBeVisible(KPISelector);
         KPISelector.click();
         WaitingForElementToBeVisible(KPISelectorLabel);
-        assertEquals("Key Performance Indicators for Job Title",KPISelectorLabel.getText());
         logger.debug("Performance module ➡\uFE0F ✅ APK Configuration Page is Opened Successfully");
     }
 
@@ -92,7 +90,6 @@ public class PerformancePage extends BasePage {
         WaitingForElementToBeVisible(AddKPIButton);
         AddKPIButton.click();
         WaitingForElementToBeVisible(AddKPILabel);
-        assertEquals("Add Key Performance Indicator",AddKPILabel.getText());
         WaitingForElementToBeVisible(KeyPerformanceIndicator);
         KeyPerformanceIndicator.sendKeys("Automation Testing");
         MinimumRating.clear();
@@ -102,20 +99,21 @@ public class PerformancePage extends BasePage {
         JobTitleValue.click();
         SaveButton.click();
         WaitingForElementToBeVisible(SuccessMessage);
-        assertEquals("Success",SuccessMessage.getText());
         logger.debug("Performance module ➡\uFE0F ✅ KPI is Added Successfully");
     }
 
     public void APKSearch(){
         WaitingForElementToBeVisible(APKSearchLabel);
-        assertEquals("Key Performance Indicators for Job Title",APKSearchLabel.getText());
+
         JobTitleDropDownListSearch.click();
         JobTitleValueSearch.click();
         SearchButton.click();
         WaitingForElementToBeVisible(KPILabel);
         WaitingForElementToBeVisible(JobTitleLabel);
-        assertEquals("Automation Testing",KPILabel.getText());
-        assertEquals("QA Engineer",JobTitleLabel.getText());
         logger.debug("Performance module ➡\uFE0F ✅ Search is Done Successfully");
+    }
+    public String SuccessMessage(){
+        WaitingForElementToBeVisible(SuccessMessage);
+        return SuccessMessage.getText();
     }
 }

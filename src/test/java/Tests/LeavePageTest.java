@@ -9,11 +9,13 @@ import Pages.LogInOutPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class LeavePageTest extends BaseTest {
 
 
     @Test
-    public void resultVacationSearchedTestCase(){
+    public void resultVacationSearchedTestCase() throws InterruptedException {
         LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
 
@@ -22,7 +24,10 @@ public class LeavePageTest extends BaseTest {
 
         leaveObj.setShowWithLeaveWithStatus();
         leaveObj.clickOnSearchButton();
+        Thread.sleep(Duration.ofSeconds(5));
         leaveObj.verifySearchResults();
+        Thread.sleep(Duration.ofSeconds(10));
+
     }
 
 }

@@ -7,10 +7,12 @@ import Pages.LogInOutPage;
 import Pages.PIMPage;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class PIMTest extends BaseTest {
 
     @Test
-    public void addUserPIMTestCase(){
+    public void addUserPIMTestCase() throws InterruptedException {
         LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
 
@@ -20,10 +22,19 @@ public class PIMTest extends BaseTest {
 
         AddUserPIMPage addUserPIMObj = new AddUserPIMPage(driver);
         addUserPIMObj.setFirstName("Aya");
+        Thread.sleep(Duration.ofSeconds(5));
         addUserPIMObj.setMiddleName("Ali");
+        Thread.sleep(Duration.ofSeconds(5));
+
         addUserPIMObj.setLastName("AbdELaal");
+        Thread.sleep(Duration.ofSeconds(5));
+
         addUserPIMObj.setEmplyeeId("1005");
+        Thread.sleep(Duration.ofSeconds(5));
+
         addUserPIMObj.clickOnSaveButton();
+        Thread.sleep(Duration.ofSeconds(5));
+
     }
 
 
