@@ -67,6 +67,9 @@ public class RecruitmentPage extends BasePage
     @FindBy(xpath= "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")
     WebElement RecordsFound;
 
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    WebElement SuccessMessage;
+
     public RecruitmentPage(WebDriver driver)
     {
         super(driver);
@@ -252,17 +255,50 @@ public class RecruitmentPage extends BasePage
 
     public void ClickReset()
     {
-        ResetButton.click();
+        try
+        {
+            logger.trace("Trying to Find Reset Button");
+            BasePage.WaitingForElementToBeVisible(ResetButton);
+            ResetButton.click();
+            logger.debug("Reset Button is clicked..");
+        }
+        catch (Exception e)
+        {
+            logger.trace("Error Exception : Reset Button", e);
+        }
+
     }
 
     public void ClickSearch()
     {
-        SearchButton.click();
+        try
+        {
+            logger.trace("Trying to Find Search Button ");
+            BasePage.WaitingForElementToBeVisible(SearchButton);
+            SearchButton.click();
+            logger.debug("Search Button is clicked..");
+        }
+        catch (Exception e)
+        {
+            logger.trace("Error Exception : Search Button", e);
+        }
+
     }
 
     public void ClickAdd()
     {
-        AddButton.click();
+        try
+        {
+            logger.trace("Trying to Find Add Button");
+            BasePage.WaitingForElementToBeVisible(AddButton);
+            AddButton.click();
+            logger.debug("Add Button is clicked..");
+        }
+        catch (Exception e)
+        {
+            logger.trace("Error Exception : Add Button", e);
+        }
+
     }
 
     public String CheckRecordsVisibility()
@@ -272,6 +308,26 @@ public class RecruitmentPage extends BasePage
         String RecordsWord = RecordsFound.getText();
         return RecordsWord;
     }
+
+    public boolean CheckSuccessVisibility()
+    {
+        boolean Check = false;
+
+        try
+        {
+            logger.trace("Trying to Find Success Message");
+            BasePage.WaitingForElementToBeVisible(SuccessMessage);
+            Check = SuccessMessage.isDisplayed();
+            logger.debug("Success Message is Displayed..");
+
+        }
+        catch (Exception e)
+        {
+            logger.trace("Error Exception : Success Message ", e);
+        }
+        return Check;
+    }
+
 
     public void SearchForCandidate( String candidateName, String keywords, String fromDate, String toDate)
     {
