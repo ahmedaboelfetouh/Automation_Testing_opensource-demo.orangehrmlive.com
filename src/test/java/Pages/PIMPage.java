@@ -21,6 +21,7 @@ public class PIMPage extends BasePage {
     public void clickOnPIMButton(){
         BasePage.WaitingForElementToBeVisible(pimButtom);
         pimButtom.click();
+        logger.debug("PIM Module: Click On PIM Button");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
@@ -29,6 +30,7 @@ public class PIMPage extends BasePage {
     public void clickOnAddUserButton(){
         BasePage.WaitingForElementToBeVisible(addUserButton);
         addUserButton.click();
+        logger.debug("Add User In PIM Module: Click On Add User Button");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
@@ -46,14 +48,12 @@ public class PIMPage extends BasePage {
         BasePage.WaitingForElementToBeVisible(employeeNameSearch);
         employeeNameSearch.clear();
         employeeNameSearch.sendKeys(value);
-        System.out.println("Before Search: " + resultEmployees.size());
-
-
+        logger.debug("PIM Module: Set Employee Name Search");
+        System.out.println("Before Search: " + resultEmployees.size()+ " Of Employees");
     }
 
     private void waitForResults() {
         try {
-            // Wait for either results to appear or "No Records Found" message
             wait.until(driver -> !resultEmployees.isEmpty() ||
                     driver.findElement(By.cssSelector(".oxd-text--span")).getText().contains("No Records Found"));
         } catch (Exception e) {
@@ -63,12 +63,13 @@ public class PIMPage extends BasePage {
 
     public void verifySearchResults() {
         waitForResults();
-        System.out.println("After Search: " + resultEmployees.size());
+        System.out.println("After Search: " + resultEmployees.size()+ " Of Employees");
     }
 
     public void clickOnSearchButton() {
         BasePage.WaitingForElementToBeVisible(searchButton);
         searchButton.click();
+        logger.debug("Search About User PIM Module: Click On Search Button");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(9) > div > button:nth-child(1)")
@@ -77,6 +78,7 @@ public class PIMPage extends BasePage {
     public void clickOnEditButton(){
         BasePage.WaitingForElementToBeClickable(editButton);
         editButton.click();
+        logger.debug("PIM Module: Click On Edit Button");
     }
 
 }

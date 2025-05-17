@@ -19,6 +19,7 @@ public class LeavePage extends BasePage {
     public void clickOnLeaveButton(){
         BasePage.WaitingForElementToBeVisible(leaveButtom);
         leaveButtom.click();
+        logger.debug("Search User In Leave Module: Click On Leave Button");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
@@ -27,6 +28,7 @@ public class LeavePage extends BasePage {
     public void setFromDate(String date) {
         BasePage.WaitingForElementToBeVisible(fromDate);
         fromDate.sendKeys(date);
+        logger.debug("Search User In Leave Module: Set From Date");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > input")
@@ -35,6 +37,7 @@ public class LeavePage extends BasePage {
     public void setToDate(String date) {
         BasePage.WaitingForElementToBeVisible(toDate);
         toDate.sendKeys(date);
+        logger.debug("Search User In Leave Module: Set To Date");
     }
 
 
@@ -48,6 +51,7 @@ public class LeavePage extends BasePage {
         BasePage.WaitingForElementToBeClickable(showWithLeaveWithStatus);
         showWithLeaveWithStatus.click();
         rejected.click();
+        logger.debug("Search User In Leave Module: Set Show With Leave With Status");
     }
 
 
@@ -61,6 +65,8 @@ public class LeavePage extends BasePage {
         BasePage.WaitingForElementToBeClickable(leaveType);
         leaveType.click();
         vacation.click();
+        logger.debug("Search User In Leave Module: Set Leave Type");
+
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
@@ -69,6 +75,8 @@ public class LeavePage extends BasePage {
     public void setEmployeeName(String name){
         BasePage.WaitingForElementToBeVisible(employeeName);
         employeeName.sendKeys(name);
+        logger.debug("Search User In Leave Module: Set Employee Name");
+
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
@@ -81,6 +89,7 @@ public class LeavePage extends BasePage {
         BasePage.WaitingForElementToBeClickable(sub_Unit);
         sub_Unit.click();
         engineering.click();
+        logger.debug("Search User In Leave Module: Set Sub Unit");
     }
 
 
@@ -92,6 +101,7 @@ public class LeavePage extends BasePage {
         if (!includePastEmployeescheck.isSelected()){
             includePastEmployeescheck.click();
         }
+        logger.debug("Search User In Leave Module: Set Include Past Employees check");
     }
 
 
@@ -101,6 +111,8 @@ public class LeavePage extends BasePage {
     public void clickOnSearchButton(){
         BasePage.WaitingForElementToBeClickable(searchButton);
         searchButton.click();
+        logger.debug("Search User In Leave Module: Click On Search Button");
+
     }
 
 
@@ -109,7 +121,6 @@ public class LeavePage extends BasePage {
 
     private void waitForResults() {
         try {
-            // Wait for either results to appear or "No Records Found" message
             wait.until(driver -> !resultVacations.isEmpty() ||
                     driver.findElement(By.cssSelector(".oxd-text--span")).getText().contains("No Records Found"));
         } catch (Exception e) {
@@ -120,6 +131,7 @@ public class LeavePage extends BasePage {
     public void verifySearchResults() {
         waitForResults();
         System.out.println("After Search: " + resultVacations.size());
+        logger.debug("Search User In Leave Module: Verification Of Search Results");
     }
 
 }

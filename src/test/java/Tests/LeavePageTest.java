@@ -16,6 +16,8 @@ public class LeavePageTest extends BaseTest {
 
     @Test
     public void resultVacationSearchedTestCase() throws InterruptedException {
+        logger.info("Leave Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Search Leave Test");
+
         LogInOutPage logObj = new LogInOutPage(driver);
         logObj.Login("Admin","admin123");
 
@@ -24,9 +26,10 @@ public class LeavePageTest extends BaseTest {
 
         leaveObj.setShowWithLeaveWithStatus();
         leaveObj.clickOnSearchButton();
-        Thread.sleep(Duration.ofSeconds(5));
         leaveObj.verifySearchResults();
-        Thread.sleep(Duration.ofSeconds(10));
+
+        logger.debug("Leave module ➡\uFE0F ✅✅✅ Search Leave Test Completed Successfully");
+
 
     }
 

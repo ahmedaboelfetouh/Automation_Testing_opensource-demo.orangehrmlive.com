@@ -3,6 +3,7 @@ package Pages;
 
 import Base.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,8 +21,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setFirstNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(firstNameUser);
-        firstNameUser.clear();
+        firstNameUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        firstNameUser.sendKeys(Keys.DELETE);
         firstNameUser.sendKeys(name);
+        logger.debug("Edit User IN PIM Module: Set First Name User");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(2) > div:nth-child(2) > input")
@@ -29,8 +32,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setMiddleNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(middleNameUser);
-        middleNameUser.clear();
+        middleNameUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        middleNameUser.sendKeys(Keys.DELETE);
         middleNameUser.sendKeys(name);
+        logger.debug("Edit User IN PIM Module: Set Middle Name User");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(3) > div:nth-child(2) > input")
@@ -38,8 +43,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setLastNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(lastNameUser);
-        lastNameUser.clear();
+        lastNameUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        lastNameUser.sendKeys(Keys.DELETE);
         lastNameUser.sendKeys(name);
+        logger.debug("Edit User IN PIM Module: Set Last Name User");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > input")
@@ -47,8 +54,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setIdUser(String id){
         BasePage.WaitingForElementToBeVisible(idUser);
-        idUser.clear();
+        idUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        idUser.sendKeys(Keys.DELETE);
         idUser.sendKeys(id);
+        logger.debug("Edit User IN PIM Module: Set User ID");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > input")
@@ -56,8 +65,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setOtherIdUser(String otherid){
         BasePage.WaitingForElementToBeVisible(otherIdUser);
-        otherIdUser.clear();
+        otherIdUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        otherIdUser.sendKeys(Keys.DELETE);
         otherIdUser.sendKeys(otherid);
+        logger.debug("Edit User IN PIM Module: Set Other ID'S");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > input")
@@ -65,8 +76,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setDriverLicenseNumber(String number){
         BasePage.WaitingForElementToBeVisible(driverLicenseNumber);
-        driverLicenseNumber.clear();
+        driverLicenseNumber.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        driverLicenseNumber.sendKeys(Keys.DELETE);
         driverLicenseNumber.sendKeys(number);
+        logger.debug("Edit User IN PIM Module: Set Driver License Number");
     }
 
 
@@ -75,8 +88,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setLicenceExpiryDate(String date){
         BasePage.WaitingForElementToBeVisible(licenceExpiryDate);
-        licenceExpiryDate.clear();
+        licenceExpiryDate.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        licenceExpiryDate.sendKeys(Keys.DELETE);
         licenceExpiryDate.sendKeys(date);
+        logger.debug("Edit User IN PIM Module: Set Licence Expiry Date");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
@@ -89,6 +104,7 @@ public class EditUserPIMPage extends BasePage {
         BasePage.WaitingForElementToBeClickable(dropdownOfNationality);
         dropdownOfNationality.click();
         afghan.click();
+        logger.debug("Edit User IN PIM Module: Click On Dropdown Of Nationality");
     }
 
 
@@ -102,6 +118,7 @@ public class EditUserPIMPage extends BasePage {
         BasePage.WaitingForElementToBeClickable(dropdownOfMatrialStatus);
         dropdownOfMatrialStatus.click();
         single.click();
+        logger.debug("Edit User IN PIM Module: Click On Dropdown Of Matrial Status");
     }
 
 
@@ -110,9 +127,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setDateOfBirth(String date){
         BasePage.WaitingForElementToBeVisible(dateOfBirth);
-        dateOfBirth.clear();
+        dateOfBirth.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        dateOfBirth.sendKeys(Keys.DELETE);
         dateOfBirth.sendKeys(date);
-        dateOfBirth.clear();
+        logger.debug("Edit User IN PIM Module: Set Date Of Birth");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div.--gender-grouped-field > div:nth-child(2) > div:nth-child(2) > div > label")
@@ -120,7 +138,11 @@ public class EditUserPIMPage extends BasePage {
 
     public void setFemaleGender(){
         BasePage.WaitingForElementToBeClickable(femaleGender);
-        femaleGender.click();
+        if (!femaleGender.isSelected()){
+            femaleGender.click();
+
+        };
+        logger.debug("Edit User IN PIM Module: Set Female Gender");
     }
 
 
@@ -129,7 +151,10 @@ public class EditUserPIMPage extends BasePage {
 
     public void setMaleGender(){
         BasePage.WaitingForElementToBeClickable(maleGender);
-        maleGender.click();
+        if(!maleGender.isSelected()){
+            maleGender.click();
+        }
+        logger.debug("Edit User IN PIM Module: Set Male Gender");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div.oxd-form-actions > button")
@@ -138,8 +163,17 @@ public class EditUserPIMPage extends BasePage {
     public void clickOnPersonalInfoSaveButton(){
         BasePage.WaitingForElementToBeClickable(personalInfoSaveButton);
         personalInfoSaveButton.click();
+        logger.debug("Edit User IN PIM Module: Click On Personal Info Save Button");
     }
 
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationPersonalInfo;
+
+    public String checkSaveVerificationPersonalInfo(){
+        BasePage.WaitingForElementToBeVisible(saveVerifacationPersonalInfo);
+        logger.debug("Edit User In PIM Module: Verifiaction of Save Message In Personal Info");
+        return saveVerifacationPersonalInfo.getText();
+    }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
     private WebElement dropdownOfBloodType;
@@ -151,9 +185,8 @@ public class EditUserPIMPage extends BasePage {
         BasePage.WaitingForElementToBeClickable(dropdownOfBloodType);
         dropdownOfBloodType.click();
         bloodType.click();
+        logger.debug("Edit User IN PIM Module: Click On Dropdown Of Blood Type");
     }
-
-
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-actions > button")
     private WebElement customFieldSaveButton;
@@ -161,8 +194,17 @@ public class EditUserPIMPage extends BasePage {
     public void clickOnCustomFieldSaveButton(){
         BasePage.WaitingForElementToBeClickable(customFieldSaveButton);
         customFieldSaveButton.click();
+        logger.debug("Edit User IN PIM Module: Click On Custom Field Save Button");
     }
 
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationCustomField;
+
+    public String checkSaveVerificationCustomField(){
+        BasePage.WaitingForElementToBeVisible(saveVerifacationCustomField);
+        logger.debug("Edit User In PIM Module: Verifiaction of Save Message In Custom Field");
+        return saveVerifacationCustomField.getText();
+    }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > div > button")
     private WebElement addButton;
@@ -171,7 +213,7 @@ public class EditUserPIMPage extends BasePage {
         BasePage.WaitingForElementToBeClickable(addButton);
         addButton.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+        logger.debug("Edit User IN PIM Module: Click On Add File Button");
     }
 
 
@@ -183,6 +225,7 @@ public class EditUserPIMPage extends BasePage {
         BasePage.WaitingForElementToBeVisible(fileInput);
         fileInput.clear();
         fileInput.sendKeys(filePath);
+        logger.debug("Edit User IN PIM Module: Upload File");
     }
 
 
@@ -192,9 +235,18 @@ public class EditUserPIMPage extends BasePage {
     public void clickOnAddAttachmentSaveButton(){
         BasePage.WaitingForElementToBeClickable(addAttachmentSaveButton);
         addAttachmentSaveButton.click();
+        logger.debug("Edit User IN PIM Module: Click On Add Attachment Save Button");
     }
 
 
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationAddAttachment;
+
+    public String checkSaveVerificationaddAttachment(){
+        BasePage.WaitingForElementToBeVisible(saveVerifacationAddAttachment);
+        logger.debug("Edit User In PIM Module: Verifiaction of Save Message In Adding Attachment");
+        return saveVerifacationAddAttachment.getText();
+    }
 
 
 }

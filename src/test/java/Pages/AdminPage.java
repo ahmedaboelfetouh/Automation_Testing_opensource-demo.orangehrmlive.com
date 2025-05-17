@@ -5,6 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class AdminPage extends BasePage {
 
@@ -19,6 +23,7 @@ public class AdminPage extends BasePage {
     public void clickOnAdminButton(){
         BasePage.WaitingForElementToBeVisible(adminButton);
         adminButton.click();
+        logger.debug("Admin Module: Click On Admin Button");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
@@ -27,8 +32,8 @@ public class AdminPage extends BasePage {
     public void cliCkOnAddButton(){
         BasePage.WaitingForElementToBeVisible(addButton);
         addButton.click();
+        logger.debug("Add User In Admin Module: Click On Add Button");
     }
-
 
     @FindBy(css = "div.oxd-select-text-input")
     private WebElement userRoleDropdown;
@@ -39,6 +44,7 @@ public class AdminPage extends BasePage {
         BasePage.WaitingForElementToBeVisible(userRoleDropdown);
         userRoleDropdown.click();
         userRoleOptionAdmin.click();
+        logger.debug("Add User In Admin Module: Select User Role");
     }
 
     @FindBy(xpath = "//label[text()='Status']/following::div[contains(@class, 'oxd-select-text-input')][1]")
@@ -49,19 +55,26 @@ public class AdminPage extends BasePage {
     public void selectStatusAsEnabled() {
         statusDropdown.click();
         statusOptionEnabled.click();
+        logger.debug("Add User In Admin Module: Select Status");
     }
-
 
     @FindBy(xpath = "//input[@placeholder=\"Type for hints...\"]")
     private WebElement employeeName;
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Daniel Thomas Anderson']")
-    private WebElement employeeNameOption;
+    @FindBy(xpath = "//div[@role='listbox']//span")
+    private List<WebElement> employeeNameOptions;
 
     public void setEmployeeName(){
         BasePage.WaitingForElementToBeVisible(employeeName);
-        employeeName.sendKeys("Daniel");
-        BasePage.WaitingForElementToBeClickable(employeeNameOption);
-        employeeNameOption.click();
+        employeeName.sendKeys("a");
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(driver -> !employeeNameOptions.isEmpty());
+
+        WebElement firstOption = employeeNameOptions.get(0);
+        BasePage.WaitingForElementToBeClickable(firstOption);
+        firstOption.click();
+
+        logger.debug("Add User In Admin Module: Set Employee Name - First option selected");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input")
@@ -70,6 +83,7 @@ public class AdminPage extends BasePage {
     public void setUserName(String name){
         BasePage.WaitingForElementToBeVisible(userName);
         userName.sendKeys(name);
+        logger.debug("Add User In Admin Module: Set Admin Name");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input")
@@ -79,6 +93,7 @@ public class AdminPage extends BasePage {
     {
         BasePage.WaitingForElementToBeVisible(employeePassword);
         employeePassword.sendKeys(password);
+        logger.debug("Add User In Admin Module: Set Admin Password");
     }
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input")
@@ -87,6 +102,7 @@ public class AdminPage extends BasePage {
     public void setEmployeeConfirmPassword(String password){
         BasePage.WaitingForElementToBeVisible(employeeConfirmPassword);
         employeeConfirmPassword.sendKeys(password);
+        logger.debug("Add User In Admin Module: Set Admin cofirmation Password");
     }
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
@@ -95,14 +111,17 @@ public class AdminPage extends BasePage {
     public void clickOnSaveButton(){
         BasePage.WaitingForElementToBeClickable(saveButton);
         saveButton.submit();
+        logger.debug("Add User In Admin Module: Click On Save Button");
     }
 
 
     @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
     private WebElement saveVerifacation;
 
-    public void checkSaveVerification(){
-        System.out.println(saveButton.isDisplayed());
+    public String checkSaveVerification(){
+        BasePage.WaitingForElementToBeVisible(saveVerifacation);
+        logger.debug("Add User In Admin Module: Verification of Add Message is displayed");
+        return saveVerifacation.getText();
     }
 
     EditUserPage obj;
@@ -113,7 +132,7 @@ public class AdminPage extends BasePage {
     public void clickOnEditFun(){
         BasePage.WaitingForElementToBeVisible(editButton);
         editButton.click();
-        //BasePage.WaitingForElement(driver.findElement(By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > h6")));
+        logger.debug("Edite User In Admin Module: Click On Edite Button");
     }
 
 
@@ -123,13 +142,15 @@ public class AdminPage extends BasePage {
     public void clickOnDeleteButton(){
         BasePage.WaitingForElementToBeClickable(deleteButton);
         deleteButton.click();
+        logger.debug("Delete User In Admin Module: Click On Delete Button");
     }
 
-    @FindBy(css = "#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-header > p")
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
     private WebElement deleteMessageVerification;
-    public void checkDeleteMessageVerification(){
+    public String checkDeleteMessageVerification(){
         BasePage.WaitingForElementToBeVisible(deleteMessageVerification);
-        System.out.println(deleteMessageVerification.isDisplayed());
+        logger.debug("Delete User In Admin Module: Verification of Delete Message is displayed");
+        return deleteMessageVerification.getText();
     }
 
     @FindBy(css = "#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-footer > button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
@@ -137,6 +158,7 @@ public class AdminPage extends BasePage {
     public void clickOnDeleteButtonAlert(){
         BasePage.WaitingForElementToBeClickable(deleteButtonAlert);
         deleteButtonAlert.click();
+        logger.debug("Delete User In Admin Module: Click On Delete Button Alert");
     }
 
 

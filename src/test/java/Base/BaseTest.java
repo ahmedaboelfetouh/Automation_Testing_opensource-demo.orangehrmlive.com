@@ -36,11 +36,11 @@ public class BaseTest {
         driver.manage().window().maximize();
         logger.info("✅ Navigated to the site successfully");
     }
-//
-//    @AfterClass
-//    public void CloseBrowser(){
-//        driver.manage().deleteAllCookies();
-//        driver.quit();
-//        logger.info("✅ Browser Closed Successfully");
-//    }
+
+    @AfterClass
+    public void CloseBrowser(){
+        driver.manage().deleteAllCookies();
+        driver.quit();
+        logger.info("✅ Browser Closed Successfully");
+    }
 }
