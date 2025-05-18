@@ -51,11 +51,5 @@ public class PerformanceTest extends BaseTest {
         logger.debug("Performance module ➡\uFE0F ✅✅✅ Login Completed");
     }
 
-    @AfterMethod
-    public void Logout(){
-        logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
-        LogInOutPage login = new LogInOutPage(driver);
-        login.Logout();
-        logger.debug("Performance module ➡\uFE0F ✅✅✅ Logout Completed");
-    }
+
 }

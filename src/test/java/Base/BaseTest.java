@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.LogInOutPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -27,7 +29,7 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         logger.info("✅ Driver Setup Successfully");
         logger.info("✅ Browser Opened Successfully Successfully");
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
     }
 
     @BeforeMethod
@@ -36,6 +38,15 @@ public class BaseTest {
         driver.manage().window().maximize();
         logger.info("✅ Navigated to the site successfully");
     }
+
+    @AfterMethod
+    public void Logout(){
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
+        LogInOutPage login = new LogInOutPage(driver);
+        login.Logout();
+        logger.debug("Time module ➡\uFE0F ✅✅✅ Logout Completed");
+    }
+
 
     @AfterClass
     public void CloseBrowser(){

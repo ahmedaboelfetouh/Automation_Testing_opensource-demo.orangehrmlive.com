@@ -17,7 +17,7 @@ public class MyInfoPageTest extends BaseTest
 
         MyInfoPage MyInfoObj = new MyInfoPage(driver);
         MyInfoObj.CheckEditDetails("Na","Fm");
-        // Assert.assertEquals(MyInfoObj.GetUpdatedText(), "Na Fm");
+
         logger.debug("My Info module ➡\uFE0F ✅✅✅ Valid Edit TestCase Completed");
     }
 }

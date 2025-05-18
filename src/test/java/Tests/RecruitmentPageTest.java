@@ -53,11 +53,5 @@ public class RecruitmentPageTest extends BaseTest
         RecruitmentObj.CheckJobTitleIsEmpty();
         logger.debug("Recruitment module ➡\uFE0F ✅✅✅ Reset Button TestCase Completed");
     }
-    @AfterMethod
-    public void Logout(){
-        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
-        LogInOutPage login = new LogInOutPage(driver);
-        login.Logout();
-        logger.debug("Time module ➡\uFE0F ✅✅✅ Logout Completed");
-    }
+
 }

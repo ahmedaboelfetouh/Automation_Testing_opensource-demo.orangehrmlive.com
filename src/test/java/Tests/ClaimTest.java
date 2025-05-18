@@ -42,11 +42,5 @@ public class ClaimTest extends BaseTest{
         logger.debug("Claim module ➡\uFE0F ✅✅✅ Login Completed");
     }
 
-    @AfterMethod
-    public void Logout(){
-        logger.info("Claim Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
-        LogInOutPage login = new LogInOutPage(driver);
-        login.Logout();
-        logger.debug("Claim module ➡\uFE0F ✅✅✅ Logout Completed");
-    }
+
 }
