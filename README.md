@@ -13,7 +13,7 @@ The OrangeHRM Automation Testing Framework serves the following purposes:
 - BasePage: A base class for all page objects that provides common functionality like waits, element interactions, and logging.
 - Page Objects: Classes that encapsulate the UI elements and operations for specific pages or modules in the application.
 - Test Classes: Implementation of test cases that use page objects to interact with the application and perform assertions.
-- Test Runner: TestNG framework configuration that manages test execution, parallel testing, and reporting.
+- TestNG XML: TestNG framework configuration that manages test execution, parallel testing, and reporting.
 
 ## Technology Stack:
 This automation testing framework is built using a combination of powerful technologies, each serving a specific purpose to enhance the framework’s efficiency and maintainability:
