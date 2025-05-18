@@ -1,17 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="methods" thread-count="2">
-    <test verbose="2" preserve-order="true" name="C:/Users/Mahmoud Khalaf/Downloads/OrangeHRM">
+<suite name="All Test Suite" parallel="tests" thread-count="1">
+    <test verbose="2" preserve-order="true" name="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com">
         <classes>
             <class name="Tests.LoginTest">
                 <methods>
                     <include name="ValidLoginTest"/>
-                    <include name="LoginWIthDifferData"/>
                 </methods>
             </class>
+
+
             <class name="Tests.RecruitmentPageTest">
                 <methods>
                     <include name="InvalidSearchCandidateTestCase"/>
+                    <include name="ValidSearchCandidateTestCase"/>
+                    <include name="ResetButtonTestCase"/>
+                </methods>
+            </class>
+
+            <class name="Tests.MyInfoPageTest">
+                <methods>
+                    <include name="ValidEditTestCase"/>
+                </methods>
+            </class>
+
+
+
+
+            <class name="Tests.AdminTest">
+                <methods>
+                    <include name="addUserTestCase"/>
+                    <include name="editUserTestCase"/>
+                    <include name="deleteUserTestCase"/>
+                </methods>
+            </class>
+
+            <class name="Tests.LeavePageTest">
+                <methods>
+                    <include name="resultVacationSearchedTestCase"/>
+                </methods>
+            </class>
+
+            <class name="Tests.PIMTest">
+                <methods>
+                    <include name="addUserPIMTestCase"/>
+                    <include name="editUserTestCase"/>
+                    <include name="searchForEmployee"/>
+                </methods>
+            </class>
+
+            <class name="Tests.BuzzTest">
+                <methods>
+                    <include name="postPost"/>
+                    <include name="likePost"/>
+                    <include name="addComment"/>
+                    <include name="editComment"/>
+                    <include name="likeComment"/>
+                    <include name="deleteComment"/>
+                </methods>
+            </class>
+
+            <class name="Tests.DashboardTest">
+                <methods>
+                    <include name="verifyRedirectToAssignLeaveTab"/>
+                    <include name="verifyRedirectToLeaveList"/>
+                    <include name="verifyRedirectToTimeSheetsTab"/>
+                    <include name="VerifyRedirectToApplyLeaveTab"/>
+                    <include name="dashboardEmployeeDistributionSubUnitTest"/>
+                    <include name="dashboardEmployeeDistributionLocationTest"/>
+                </methods>
+            </class>
+
+            <class name="Tests.TimeTest">
+                <methods>
+                    <include name="PunchInTest"/>
+                    <include name="PunchOutTest"/>
+                </methods>
+            </class>
+            <class name="Tests.ClaimTest">
+                <methods>
+                    <include name="AssignClaimTest"/>
+                </methods>
+            </class>
+            <class name="Tests.PerformanceTest">
+                <methods>
+                    <include name="AddAPKTest"/>
+                    <include name="SearchForKPITest"/>
                 </methods>
             </class>
         </classes>

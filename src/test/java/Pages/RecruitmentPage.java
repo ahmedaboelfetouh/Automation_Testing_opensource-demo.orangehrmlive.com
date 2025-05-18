@@ -15,19 +15,19 @@ public class RecruitmentPage extends BasePage
 
     @FindBy(css= "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > div")
     WebElement JobTitle;
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Automaton Tester']")
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Payroll Administrator']")
     WebElement JobTitleValue;
 
     @FindBy(xpath= "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
     WebElement Vacancy;
 
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Junior Account Assistant']")
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Payroll Administrator']")
     WebElement VacancyValue;
 
     @FindBy(xpath= "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]")
     WebElement HiringManager;
 
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='ADMIN admin']")
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='mandaQA userlast']")
     WebElement HiringManagerValue;
 
     @FindBy(xpath= "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]")
@@ -67,8 +67,8 @@ public class RecruitmentPage extends BasePage
     @FindBy(xpath= "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")
     WebElement RecordsFound;
 
-    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
-    WebElement SuccessMessage;
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--info > p.oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text")
+    WebElement InfoMessage;
 
     public RecruitmentPage(WebDriver driver)
     {
@@ -316,14 +316,15 @@ public class RecruitmentPage extends BasePage
         try
         {
             logger.trace("Trying to Find Success Message");
-            BasePage.WaitingForElementToBeVisible(SuccessMessage);
-            Check = SuccessMessage.isDisplayed();
-            logger.debug("Success Message is Displayed..");
+            BasePage.WaitingForElementToBeVisible(InfoMessage);
+            Check = InfoMessage.isDisplayed();
+            String Text = InfoMessage.getText();
+            logger.debug("Info Message is Displayed..");
 
         }
         catch (Exception e)
         {
-            logger.trace("Error Exception : Success Message ", e);
+            logger.trace("Error Exception : Info Message ", e);
         }
         return Check;
     }

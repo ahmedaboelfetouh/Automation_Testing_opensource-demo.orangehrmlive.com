@@ -1,125 +1,465 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="25.403" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="292.603" tests="29" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="21"/>
+    <property name="java.specification.version" value="24"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\am614\.cache\selenium\chromedriver\win64\136.0.7103.94\chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\target\test-classes;C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\target\classes;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-java\4.31.0\selenium-java-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-api\4.31.0\selenium-api-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.31.0\selenium-chrome-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.31.0\selenium-chromium-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-json\4.31.0\selenium-json-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.31.0\selenium-manager-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.31.0\selenium-devtools-v133-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.31.0\selenium-devtools-v134-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.31.0\selenium-devtools-v135-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.31.0\selenium-edge-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.31.0\selenium-firefox-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-http\4.31.0\selenium-http-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.31.0\selenium-ie-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.31.0\selenium-remote-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\guava\33.4.6-jre\guava-33.4.6-jre.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-os\4.31.0\selenium-os-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.31.0\selenium-safari-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-support\4.31.0\selenium-support-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-lang3\3.15.0\commons-lang3-3.15.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-java\7.22.1\cucumber-java-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-core\7.22.1\cucumber-core-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-gherkin\7.22.1\cucumber-gherkin-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.1\cucumber-gherkin-messages-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\datatable\7.22.1\datatable-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-plugin\7.22.1\cucumber-plugin-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\docstring\7.22.1\docstring-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-testng\7.22.1\cucumber-testng-7.22.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\target\test-classes;C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\target\classes;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-java\4.31.0\selenium-java-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-api\4.31.0\selenium-api-4.31.0.jar;C:\Users\am614\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.31.0\selenium-chrome-driver-4.31.0.jar;C:\Users\am614\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.31.0\selenium-chromium-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-json\4.31.0\selenium-json-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.31.0\selenium-manager-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.31.0\selenium-devtools-v133-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.31.0\selenium-devtools-v134-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.31.0\selenium-devtools-v135-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.31.0\selenium-edge-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.31.0\selenium-firefox-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-http\4.31.0\selenium-http-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.31.0\selenium-ie-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.31.0\selenium-remote-driver-4.31.0.jar;C:\Users\am614\.m2\repository\com\google\guava\guava\33.4.6-jre\guava-33.4.6-jre.jar;C:\Users\am614\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\am614\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\am614\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\am614\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-os\4.31.0\selenium-os-4.31.0.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.31.0\selenium-safari-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-support\4.31.0\selenium-support-4.31.0.jar;C:\Users\am614\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\am614\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\am614\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\am614\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\am614\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\am614\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\am614\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\am614\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\am614\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\am614\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-lang3\3.15.0\commons-lang3-3.15.0.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\am614\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\am614\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\am614\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\am614\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\am614\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\am614\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\am614\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\am614\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-java\7.22.1\cucumber-java-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-core\7.22.1\cucumber-core-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-gherkin\7.22.1\cucumber-gherkin-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.1\cucumber-gherkin-messages-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\am614\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\am614\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\am614\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\am614\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\am614\.m2\repository\io\cucumber\datatable\7.22.1\datatable-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-plugin\7.22.1\cucumber-plugin-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\docstring\7.22.1\docstring-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\am614\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\am614\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\am614\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-testng\7.22.1\cucumber-testng-7.22.1.jar;C:\Users\am614\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\am614\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Africa/Cairo"/>
-    <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="21"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="24"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Mahmoud Khalaf\AppData\Local\Temp\surefire13505509810209185062\surefirebooter-20250513152042857_3.jar C:\Users\Mahmoud Khalaf\AppData\Local\Temp\surefire13505509810209185062 2025-05-13T15-20-42_529-jvmRun1 surefire-20250513152042857_1tmp surefire_0-20250513152042857_2tmp"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\am614\AppData\Local\Temp\surefire7163015125668166328\surefirebooter-20250518121808166_3.jar C:\Users\am614\AppData\Local\Temp\surefire7163015125668166328 2025-05-18T12-18-08_003-jvmRun1 surefire-20250518121808166_1tmp surefire_0-20250518121808166_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\target\test-classes;C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\target\classes;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-java\4.31.0\selenium-java-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-api\4.31.0\selenium-api-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.31.0\selenium-chrome-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.31.0\selenium-chromium-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-json\4.31.0\selenium-json-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.31.0\selenium-manager-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.31.0\selenium-devtools-v133-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.31.0\selenium-devtools-v134-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.31.0\selenium-devtools-v135-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.31.0\selenium-edge-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.31.0\selenium-firefox-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-http\4.31.0\selenium-http-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.31.0\selenium-ie-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.31.0\selenium-remote-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\guava\33.4.6-jre\guava-33.4.6-jre.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-os\4.31.0\selenium-os-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.31.0\selenium-safari-driver-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\seleniumhq\selenium\selenium-support\4.31.0\selenium-support-4.31.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-lang3\3.15.0\commons-lang3-3.15.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Mahmoud Khalaf\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-java\7.22.1\cucumber-java-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-core\7.22.1\cucumber-core-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-gherkin\7.22.1\cucumber-gherkin-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.1\cucumber-gherkin-messages-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\datatable\7.22.1\datatable-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-plugin\7.22.1\cucumber-plugin-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\docstring\7.22.1\docstring-7.22.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Mahmoud Khalaf\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mahmoud Khalaf\.m2\repository\io\cucumber\cucumber-testng\7.22.1\cucumber-testng-7.22.1.jar;"/>
-    <property name="allure.results.directory" value="C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\target/allure-results"/>
+    <property name="surefire.test.class.path" value="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\target\test-classes;C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\target\classes;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-java\4.31.0\selenium-java-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-api\4.31.0\selenium-api-4.31.0.jar;C:\Users\am614\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.31.0\selenium-chrome-driver-4.31.0.jar;C:\Users\am614\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.31.0\selenium-chromium-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-json\4.31.0\selenium-json-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.31.0\selenium-manager-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.31.0\selenium-devtools-v133-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.31.0\selenium-devtools-v134-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.31.0\selenium-devtools-v135-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.31.0\selenium-edge-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.31.0\selenium-firefox-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-http\4.31.0\selenium-http-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.31.0\selenium-ie-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.31.0\selenium-remote-driver-4.31.0.jar;C:\Users\am614\.m2\repository\com\google\guava\guava\33.4.6-jre\guava-33.4.6-jre.jar;C:\Users\am614\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\am614\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\am614\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\am614\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\am614\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-os\4.31.0\selenium-os-4.31.0.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.31.0\selenium-safari-driver-4.31.0.jar;C:\Users\am614\.m2\repository\org\seleniumhq\selenium\selenium-support\4.31.0\selenium-support-4.31.0.jar;C:\Users\am614\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\am614\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\am614\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\am614\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\am614\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\am614\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\am614\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\am614\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\am614\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\am614\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\am614\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\am614\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-lang3\3.15.0\commons-lang3-3.15.0.jar;C:\Users\am614\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\am614\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\am614\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\am614\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\am614\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\am614\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\am614\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\am614\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\am614\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\am614\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\am614\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-java\7.22.1\cucumber-java-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-core\7.22.1\cucumber-core-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-gherkin\7.22.1\cucumber-gherkin-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.1\cucumber-gherkin-messages-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\am614\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\am614\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\am614\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\am614\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\am614\.m2\repository\io\cucumber\datatable\7.22.1\datatable-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-plugin\7.22.1\cucumber-plugin-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\docstring\7.22.1\docstring-7.22.1.jar;C:\Users\am614\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\am614\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\am614\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\am614\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\am614\.m2\repository\io\cucumber\cucumber-testng\7.22.1\cucumber-testng-7.22.1.jar;C:\Users\am614\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\am614\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="allure.results.directory" value="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\target/allure-results"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Mahmoud Khalaf"/>
+    <property name="user.home" value="C:\Users\am614"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-01-16"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="java.version.date" value="2025-03-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-24"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM"/>
+    <property name="basedir" value="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Mahmoud Khalaf\AppData\Local\Temp\surefire13505509810209185062\surefirebooter-20250513152042857_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\am614\AppData\Local\Temp\surefire7163015125668166328\surefirebooter-20250518121808166_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
-    <property name="user.name" value="Mahmoud"/>
+    <property name="java.runtime.version" value="24+36-3646"/>
+    <property name="user.name" value="am614663"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\Mahmoud Khalaf\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\am614\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\MAHMOU~1\AppData\Local\Temp\"/>
-    <property name="java.version" value="21.0.2"/>
-    <property name="user.dir" value="C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM"/>
+    <property name="java.io.tmpdir" value="C:\Users\am614\AppData\Local\Temp\"/>
+    <property name="java.version" value="24"/>
+    <property name="user.dir" value="C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Mahmoud Khalaf\Downloads\allure-2.27.0\bin;D:\programs\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\Git\cmd;D:\testing materials\automation\allure-2.32.0\allure-2.32.0\bin;C:\Gradle\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Mahmoud Khalaf\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Program Files\JetBrains\Aqua 2024.1.1\bin;C:\Users\Mahmoud Khalaf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mahmoud Khalaf\AppData\Local\JetBrains\Toolbox\scripts;C:\Program Files\JetBrains\Aqua 2024.2.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1.1\bin;;C:\Users\Mahmoud Khalaf\AppData\Local\Microsoft\WindowsApps;C:\Users\Mahmoud Khalaf\AppData\Roaming\npm;C:\Program Files\Java\jdk-21\bin;C:\Users\Mahmoud Khalaf\AppData\Local\Programs\cursor\resources\app\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\am614\AppData\Local\Android\Sdk\platform-tools;C:\Users\am614\AppData\Local\Android\Sdk\tools;C:\Users\am614\AppData\Local\Android\Sdk\emulator;C:\Users\am614\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\allure-2.34.0\bin;C:\Program Files\Java\jdk-24\bin;C:\Users\am614\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\am614\AppData\Local\Programs\Python\Python310;C:\Users\am614\AppData\Local\Microsoft\WindowsApps;C:\Users\am614\AppData\Local\Programs\Microsoft VS Code\bin;C:\questasim64_2021.1\win64;C:\Gradle\gradle-7.4.2\bin;C:\modeltech64_2020.4\win64;C:\modeltech64_10.5\win64;C: \ flexlm \ lic_modelsim.txt;C:\Users\am614\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\am614\AppData\Roaming\fnm\node-versions\v22.15.0\installation;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
+    <property name="java.vm.version" value="24+36-3646"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="ValidLoginTest" classname="Tests.LoginTest" time="1.796">
+  <testcase name="ValidLoginTest" classname="Tests.LoginTest" time="2.51">
+    <system-out><![CDATA[2025-05-18 12:18:12,087 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:18:12,094 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:18:14,484 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:18:14,632 [TestNG-tests-1] INFO : 🚀 🚀 🚀 Starting Login Test
+2025-05-18 12:18:17,091 [TestNG-tests-1] DEBUG: ✅✅✅ Login Test Completed Successfully
+]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-May 13, 2025 3:20:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 18, 2025 12:18:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
 ]]></system-err>
   </testcase>
-  <testcase name="LoginWIthDifferData[Admin, admin123](1)" classname="Tests.LoginTest" time="2.438">
-    <failure message="stale element reference: stale element not found&#10;  (Session info: chrome=136.0.7103.93)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception&#10;Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [6f11017506f5d22043fe872040317c1f, clickElement {id=f.C07B99C97EAFC74BE9158D214CB00147.d.C27381E58AC8F95039E09432A11F9E77.e.13}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.93, chrome: {chromedriverVersion: 136.0.7103.92 (cb81a4cc5087..., userDataDir: C:\Users\MAHMOU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60365/devtoo..., se:cdpVersion: 136.0.7103.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (6f11017506f5d22043fe872040317c1f)] -&gt; xpath: //*[@id=&quot;app&quot;]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]&#10;Session ID: 6f11017506f5d22043fe872040317c1f" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
-stale element reference: stale element not found
-  (Session info: chrome=136.0.7103.93)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f11017506f5d22043fe872040317c1f, clickElement {id=f.C07B99C97EAFC74BE9158D214CB00147.d.C27381E58AC8F95039E09432A11F9E77.e.13}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.93, chrome: {chromedriverVersion: 136.0.7103.92 (cb81a4cc5087..., userDataDir: C:\Users\MAHMOU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60365/devtoo..., se:cdpVersion: 136.0.7103.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (6f11017506f5d22043fe872040317c1f)] -> xpath: //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]
-Session ID: 6f11017506f5d22043fe872040317c1f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at Pages.LoginPage.ClickButton(LoginPage.java:40)
-	at Pages.LoginPage.Login(LoginPage.java:46)
-	at Tests.LoginTest.LoginWIthDifferData(LoginTest.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-]]></failure>
+  <testcase name="InvalidSearchCandidateTestCase" classname="Tests.RecruitmentPageTest" time="5.274">
+    <system-out><![CDATA[2025-05-18 12:18:17,334 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:18:18,473 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:18:18,473 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:18:20,557 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:18:20,562 [TestNG-tests-1] INFO : Recruitment Module ➡️ 🚀🚀🚀 Start Login For Invalid Search Candidate TestCase
+2025-05-18 12:18:22,895 [TestNG-tests-1] INFO : Recruitment Page Object Created...
+2025-05-18 12:18:23,614 [TestNG-tests-1] DEBUG: Recruitment Button is Clicked..
+2025-05-18 12:18:24,669 [TestNG-tests-1] DEBUG: Value Entered to Status..
+2025-05-18 12:18:24,740 [TestNG-tests-1] DEBUG: Value Entered to Candidate Name..
+2025-05-18 12:18:24,811 [TestNG-tests-1] DEBUG: Value Entered to Keywordse..
+2025-05-18 12:18:24,916 [TestNG-tests-1] DEBUG: Value Entered to FromDate..
+2025-05-18 12:18:25,006 [TestNG-tests-1] DEBUG: Value Entered to ToDate..
+2025-05-18 12:18:25,173 [TestNG-tests-1] DEBUG: Value Entered to Method Of Application..
+2025-05-18 12:18:25,265 [TestNG-tests-1] DEBUG: Search Button is clicked..
+2025-05-18 12:18:25,833 [TestNG-tests-1] DEBUG: Recruitment module ➡️ ✅✅✅ Invalid Search Candidate TestCase Completed
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:18:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
   </testcase>
-  <testcase name="LoginWIthDifferData[Admin, admin1234](2)" classname="Tests.LoginTest" time="0.881"/>
-  <testcase name="LoginWIthDifferData[Admin, admin12345](3)" classname="Tests.LoginTest" time="0.885"/>
-  <testcase name="LoginWIthDifferData[Admin, admin123456](4)" classname="Tests.LoginTest" time="0.885"/>
-  <testcase name="LoginWIthDifferData[Admin, admin1234567](5)" classname="Tests.LoginTest" time="0.796"/>
-  <testcase name="LoginWIthDifferData[Admin, admin12345678](6)" classname="Tests.LoginTest" time="0.785"/>
-  <testcase name="LoginWIthDifferData[Admin, admin123456789](7)" classname="Tests.LoginTest" time="0.762"/>
+  <testcase name="ValidSearchCandidateTestCase" classname="Tests.RecruitmentPageTest" time="5.107">
+    <system-out><![CDATA[2025-05-18 12:18:25,835 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:18:27,057 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:18:27,479 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:18:27,483 [TestNG-tests-1] INFO : Recruitment Module ➡️ 🚀🚀🚀 Start Login For Valid Search Candidate TestCase 
+2025-05-18 12:18:29,648 [TestNG-tests-1] INFO : Recruitment Page Object Created...
+2025-05-18 12:18:30,479 [TestNG-tests-1] DEBUG: Recruitment Button is Clicked..
+2025-05-18 12:18:31,356 [TestNG-tests-1] DEBUG: Value Entered to Vacancy..
+2025-05-18 12:18:31,549 [TestNG-tests-1] DEBUG: Value Entered to Status..
+2025-05-18 12:18:31,617 [TestNG-tests-1] DEBUG: Value Entered to Candidate Name..
+2025-05-18 12:18:31,681 [TestNG-tests-1] DEBUG: Value Entered to Keywordse..
+2025-05-18 12:18:31,746 [TestNG-tests-1] DEBUG: Value Entered to FromDate..
+2025-05-18 12:18:31,814 [TestNG-tests-1] DEBUG: Value Entered to ToDate..
+2025-05-18 12:18:31,944 [TestNG-tests-1] DEBUG: Value Entered to Method Of Application..
+2025-05-18 12:18:32,028 [TestNG-tests-1] DEBUG: Search Button is clicked..
+2025-05-18 12:18:32,587 [TestNG-tests-1] DEBUG: Recruitment module ➡️ ✅✅✅ Valid Search Candidate TestCase Completed
+]]></system-out>
+  </testcase>
+  <testcase name="ResetButtonTestCase" classname="Tests.RecruitmentPageTest" time="4.887">
+    <system-out><![CDATA[2025-05-18 12:18:32,590 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:18:33,784 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:18:34,207 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:18:34,212 [TestNG-tests-1] INFO : Recruitment Module ➡️ 🚀🚀🚀 Start Login For Reset Button TestCase
+2025-05-18 12:18:36,787 [TestNG-tests-1] INFO : Recruitment Page Object Created...
+2025-05-18 12:18:37,624 [TestNG-tests-1] DEBUG: Recruitment Button is Clicked..
+2025-05-18 12:18:38,517 [TestNG-tests-1] DEBUG: Value Entered to Candidate Name..
+2025-05-18 12:18:38,577 [TestNG-tests-1] DEBUG: Value Entered to Keywordse..
+2025-05-18 12:18:38,670 [TestNG-tests-1] DEBUG: Value Entered to FromDate..
+2025-05-18 12:18:38,859 [TestNG-tests-1] DEBUG: Value Entered to ToDate..
+2025-05-18 12:18:38,981 [TestNG-tests-1] DEBUG: Value Entered to Method Of Application..
+2025-05-18 12:18:39,077 [TestNG-tests-1] DEBUG: Reset Button is clicked..
+✅ JobTitle field is clear.
+2025-05-18 12:18:39,094 [TestNG-tests-1] DEBUG: Recruitment module ➡️ ✅✅✅ Reset Button TestCase Completed
+]]></system-out>
+  </testcase>
+  <testcase name="ValidEditTestCase" classname="Tests.MyInfoPageTest" time="20.24">
+    <system-out><![CDATA[2025-05-18 12:18:39,096 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:18:40,568 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:18:40,792 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:18:41,950 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:18:41,950 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:18:45,019 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:18:45,026 [TestNG-tests-1] INFO : My Info Module ➡️ 🚀🚀🚀 Start Login For Valid Edit TestCase
+2025-05-18 12:18:49,959 [TestNG-tests-1] INFO : Recruitment Page Object Created...
+2025-05-18 12:18:51,921 [TestNG-tests-1] DEBUG: My Info Link is Selected..
+2025-05-18 12:18:54,135 [TestNG-tests-1] DEBUG: Value Entered to FirstName..
+2025-05-18 12:18:54,290 [TestNG-tests-1] DEBUG: Value Entered to LastName..
+2025-05-18 12:18:54,413 [TestNG-tests-1] DEBUG: Male Button is Selected..
+2025-05-18 12:18:54,645 [TestNG-tests-1] DEBUG: Value Entered to Blood Type..
+2025-05-18 12:19:05,262 [TestNG-tests-1] DEBUG: ContactDetails Link is Selected..
+2025-05-18 12:19:05,262 [TestNG-tests-1] DEBUG: My Info module ➡️ ✅✅✅ Valid Edit TestCase Completed
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:18:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="addUserTestCase" classname="Tests.AdminTest" time="18.778">
+    <system-out><![CDATA[2025-05-18 12:19:05,487 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:19:06,791 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:19:06,791 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:19:09,072 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:19:09,077 [TestNG-tests-1] INFO : Admin Module ➡️ 🚀🚀🚀 Starting Add User Test
+2025-05-18 12:19:12,473 [TestNG-tests-1] DEBUG: Admin Module: Click On Admin Button
+2025-05-18 12:19:13,452 [TestNG-tests-1] DEBUG: Add User In Admin Module: Click On Add Button
+2025-05-18 12:19:14,110 [TestNG-tests-1] DEBUG: Add User In Admin Module: Select User Role
+2025-05-18 12:19:14,231 [TestNG-tests-1] DEBUG: Add User In Admin Module: Select Status
+2025-05-18 12:19:15,936 [TestNG-tests-1] DEBUG: Add User In Admin Module: Set Employee Name - First option selected
+2025-05-18 12:19:16,057 [TestNG-tests-1] DEBUG: Add User In Admin Module: Set Admin Name
+2025-05-18 12:19:26,152 [TestNG-tests-1] DEBUG: Add User In Admin Module: Set Admin Password
+2025-05-18 12:19:26,246 [TestNG-tests-1] DEBUG: Add User In Admin Module: Set Admin cofirmation Password
+2025-05-18 12:19:26,289 [TestNG-tests-1] DEBUG: Add User In Admin Module: Click On Save Button
+2025-05-18 12:19:27,838 [TestNG-tests-1] DEBUG: Add User In Admin Module: Verification of Add Message is displayed
+2025-05-18 12:19:27,852 [TestNG-tests-1] DEBUG: Admin module ➡️ ✅✅✅ Add User Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:19:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="editUserTestCase" classname="Tests.AdminTest" time="7.103">
+    <system-out><![CDATA[2025-05-18 12:19:27,854 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:19:29,164 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:19:29,611 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:19:29,615 [TestNG-tests-1] INFO : Admin Module ➡️ 🚀🚀🚀 Starting Edit User Test
+2025-05-18 12:19:32,895 [TestNG-tests-1] DEBUG: Admin Module: Click On Admin Button
+2025-05-18 12:19:34,307 [TestNG-tests-1] DEBUG: Edite User In Admin Module: Click On Edite Button
+2025-05-18 12:19:34,915 [TestNG-tests-1] DEBUG: Edit User In Admin Module: Click On Password Checkbox
+2025-05-18 12:19:35,005 [TestNG-tests-1] DEBUG: Edit User In Admin Module: Set Admin Password
+2025-05-18 12:19:35,097 [TestNG-tests-1] DEBUG: Edit User In Admin Module: Set Admin Confirmation Password
+2025-05-18 12:19:35,133 [TestNG-tests-1] DEBUG: Edit User In Admin Module: Click On Save Button
+2025-05-18 12:19:36,687 [TestNG-tests-1] DEBUG: Edit User In Admin Module: Verifiaction of Save Message
+2025-05-18 12:19:36,713 [TestNG-tests-1] DEBUG: Admin module ➡️ ✅✅✅ Edit User Test Completed Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="deleteUserTestCase" classname="Tests.AdminTest" time="5.277">
+    <system-out><![CDATA[2025-05-18 12:19:36,717 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:19:38,043 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:19:38,538 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:19:38,542 [TestNG-tests-1] INFO : Admin Module ➡️ 🚀🚀🚀 Starting Delete User Test
+2025-05-18 12:19:41,549 [TestNG-tests-1] DEBUG: Admin Module: Click On Admin Button
+2025-05-18 12:19:42,663 [TestNG-tests-1] DEBUG: Delete User In Admin Module: Click On Delete Button
+2025-05-18 12:19:43,271 [TestNG-tests-1] DEBUG: Delete User In Admin Module: Click On Delete Button Alert
+2025-05-18 12:19:43,797 [TestNG-tests-1] DEBUG: Delete User In Admin Module: Verification of Delete Message is displayed
+2025-05-18 12:19:43,815 [TestNG-tests-1] DEBUG: Admin module ➡️ ✅✅✅ Delete User Test Completed Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="resultVacationSearchedTestCase" classname="Tests.LeavePageTest" time="14.298">
+    <system-out><![CDATA[2025-05-18 12:19:43,817 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:19:45,165 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:19:45,412 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:19:46,518 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:19:46,518 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:19:48,695 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:19:48,700 [TestNG-tests-1] INFO : Leave Module ➡️ 🚀🚀🚀 Starting Search Leave Test
+2025-05-18 12:19:52,146 [TestNG-tests-1] DEBUG: Search User In Leave Module: Click On Leave Button
+2025-05-18 12:19:52,848 [TestNG-tests-1] DEBUG: Search User In Leave Module: Set Show With Leave With Status
+2025-05-18 12:19:52,945 [TestNG-tests-1] DEBUG: Search User In Leave Module: Click On Search Button
+Error waiting for results: Expected condition failed: waiting for Pages.LeavePage$$Lambda/0x000002649b351230@3086ba54 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\am614\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49824/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 082c979a0cddfe913140f7240209846c
+After Search: 0
+2025-05-18 12:20:02,994 [TestNG-tests-1] DEBUG: Search User In Leave Module: Verification Of Search Results
+2025-05-18 12:20:02,994 [TestNG-tests-1] DEBUG: Leave module ➡️ ✅✅✅ Search Leave Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:19:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="addUserPIMTestCase" classname="Tests.PIMTest" time="18.268">
+    <system-out><![CDATA[2025-05-18 12:20:03,226 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:20:04,298 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:20:04,298 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:20:06,527 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:20:06,532 [TestNG-tests-1] INFO : PIM Module ➡️ 🚀🚀🚀 Starting Add User Test
+2025-05-18 12:20:09,877 [TestNG-tests-1] DEBUG: PIM Module: Click On PIM Button
+2025-05-18 12:20:10,776 [TestNG-tests-1] DEBUG: Add User In PIM Module: Click On Add User Button
+2025-05-18 12:20:11,373 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set First Name
+2025-05-18 12:20:11,453 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Middle Name
+2025-05-18 12:20:11,537 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Last Name
+2025-05-18 12:20:12,201 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Employee ID
+2025-05-18 12:20:12,309 [TestNG-tests-1] DEBUG: Add User In PIM Module: Create Login Details Fun
+2025-05-18 12:20:12,406 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set User Name
+2025-05-18 12:20:22,516 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Enable Button
+2025-05-18 12:20:22,602 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Employee Password
+2025-05-18 12:20:22,691 [TestNG-tests-1] DEBUG: Add User In PIM Module: Set Employee Confirm Password
+2025-05-18 12:20:22,721 [TestNG-tests-1] DEBUG: Add User In PIM Module: Click On Save Button
+2025-05-18 12:20:24,779 [TestNG-tests-1] DEBUG: Edit User In PIM Module: Verifiaction of Save Message
+2025-05-18 12:20:24,794 [TestNG-tests-1] DEBUG: PIM module ➡️ ✅✅✅ Add User Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:20:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="editUserTestCase" classname="Tests.PIMTest" time="10.132">
+    <system-out><![CDATA[2025-05-18 12:20:24,797 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:20:26,165 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:20:26,617 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:20:26,620 [TestNG-tests-1] INFO : PIM Module ➡️ 🚀🚀🚀 Starting Edit User Test
+2025-05-18 12:20:31,079 [TestNG-tests-1] DEBUG: PIM Module: Click On PIM Button
+2025-05-18 12:20:33,069 [TestNG-tests-1] DEBUG: PIM Module: Click On Edit Button
+2025-05-18 12:20:34,364 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set First Name User
+2025-05-18 12:20:34,557 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Middle Name User
+2025-05-18 12:20:34,730 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Last Name User
+2025-05-18 12:20:34,867 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set User ID
+2025-05-18 12:20:35,003 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Other ID'S
+2025-05-18 12:20:35,129 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Driver License Number
+2025-05-18 12:20:35,267 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Licence Expiry Date
+2025-05-18 12:20:35,433 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Click On Dropdown Of Nationality
+2025-05-18 12:20:35,588 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Click On Dropdown Of Matrial Status
+2025-05-18 12:20:35,722 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Date Of Birth
+2025-05-18 12:20:35,823 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Set Female Gender
+2025-05-18 12:20:35,909 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Click On Personal Info Save Button
+2025-05-18 12:20:36,435 [TestNG-tests-1] DEBUG: Edit User In PIM Module: Verifiaction of Save Message In Personal Info
+2025-05-18 12:20:36,622 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Click On Dropdown Of Blood Type
+2025-05-18 12:20:36,718 [TestNG-tests-1] DEBUG: Edit User IN PIM Module: Click On Custom Field Save Button
+2025-05-18 12:20:36,734 [TestNG-tests-1] DEBUG: Edit User In PIM Module: Verifiaction of Save Message In Custom Field
+2025-05-18 12:20:36,748 [TestNG-tests-1] DEBUG: PIM module ➡️ ✅✅✅ Edit User Test Completed Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="searchForEmployee" classname="Tests.PIMTest" time="4.174">
+    <system-out><![CDATA[2025-05-18 12:20:36,750 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:20:37,982 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:20:38,431 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:20:38,435 [TestNG-tests-1] INFO : PIM Module ➡️ 🚀🚀🚀 Starting Search User Test
+2025-05-18 12:20:41,349 [TestNG-tests-1] DEBUG: PIM Module: Click On PIM Button
+2025-05-18 12:20:41,963 [TestNG-tests-1] DEBUG: PIM Module: Set Employee Name Search
+Before Search: 0 Of Employees
+2025-05-18 12:20:42,053 [TestNG-tests-1] DEBUG: Search About User PIM Module: Click On Search Button
+After Search: 13 Of Employees
+2025-05-18 12:20:42,604 [TestNG-tests-1] DEBUG: PIM module ➡️ ✅✅✅ Search User Test Completed Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="postPost" classname="Tests.BuzzTest" time="4.474">
+    <system-out><![CDATA[2025-05-18 12:20:42,606 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:20:43,804 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:20:44,049 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:20:45,207 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:20:45,208 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:20:50,235 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:20:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="likePost" classname="Tests.BuzzTest" time="3.923">
+    <system-out><![CDATA[2025-05-18 12:20:54,712 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:20:55,962 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:20:56,407 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="addComment" classname="Tests.BuzzTest" time="3.923">
+    <system-out><![CDATA[2025-05-18 12:21:00,331 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:01,672 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:02,376 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="editComment" classname="Tests.BuzzTest" time="4.65">
+    <system-out><![CDATA[2025-05-18 12:21:06,301 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:07,546 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:07,989 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="likeComment" classname="Tests.BuzzTest" time="4.549">
+    <system-out><![CDATA[2025-05-18 12:21:12,640 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:13,911 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:14,324 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="deleteComment" classname="Tests.BuzzTest" time="5.336">
+    <system-out><![CDATA[2025-05-18 12:21:18,877 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:20,068 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:20,496 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:21:25,831 [TestNG-tests-1] DEBUG: Delete User In Admin Module: Click On Delete Button Alert
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRedirectToAssignLeaveTab" classname="Tests.DashboardTest" time="3.838">
+    <system-out><![CDATA[2025-05-18 12:21:25,834 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:27,046 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:27,310 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:21:28,406 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:21:28,407 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:21:31,236 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:21:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="verifyRedirectToLeaveList" classname="Tests.DashboardTest" time="3.099">
+    <system-out><![CDATA[2025-05-18 12:21:35,076 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:36,788 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:37,225 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRedirectToTimeSheetsTab" classname="Tests.DashboardTest" time="2.624">
+    <system-out><![CDATA[2025-05-18 12:21:40,326 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:42,002 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:42,425 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="VerifyRedirectToApplyLeaveTab" classname="Tests.DashboardTest" time="2.788">
+    <system-out><![CDATA[2025-05-18 12:21:45,052 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:46,748 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:47,352 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="dashboardEmployeeDistributionSubUnitTest" classname="Tests.DashboardTest" time="3.154">
+    <system-out><![CDATA[2025-05-18 12:21:50,143 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:51,880 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:52,312 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="dashboardEmployeeDistributionLocationTest" classname="Tests.DashboardTest" time="3.29">
+    <system-out><![CDATA[2025-05-18 12:21:55,468 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:21:56,769 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:21:57,380 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+]]></system-out>
+  </testcase>
+  <testcase name="AssignClaimTest" classname="Tests.ClaimTest" time="9.136">
+    <system-out><![CDATA[2025-05-18 12:22:00,673 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:22:02,151 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:22:02,376 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:22:03,450 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:22:03,451 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:22:05,579 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:22:05,580 [TestNG-tests-1] INFO : Claim Module ➡️ 🚀🚀🚀 Start Login
+2025-05-18 12:22:08,039 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅✅✅ Login Completed
+2025-05-18 12:22:08,043 [TestNG-tests-1] INFO : Claim Module ➡️ 🚀🚀🚀 Starting Assign Claim Test
+2025-05-18 12:22:09,254 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅ Claim Module is Opened Successfully
+2025-05-18 12:22:10,214 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅ Assign Claim Page is Opened Successfully
+2025-05-18 12:22:12,879 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅ Claim is Created Successfully
+2025-05-18 12:22:17,150 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅ Claim is Submitted Successfully
+2025-05-18 12:22:17,176 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅✅✅ Assign Claim Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:22:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="PunchInTest" classname="Tests.TimeTest" time="5.052">
+    <system-out><![CDATA[2025-05-18 12:22:17,178 [TestNG-tests-1] INFO : Claim Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:22:18,376 [TestNG-tests-1] DEBUG: Claim module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:22:20,552 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:22:21,457 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:22:21,458 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:22:23,429 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:22:23,431 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Start Login
+2025-05-18 12:22:25,806 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Login Completed
+2025-05-18 12:22:25,811 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Starting Punch In Test
+2025-05-18 12:22:27,024 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Time Module is Opened Successfully
+2025-05-18 12:22:27,674 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Attendance Drop Down Menu is Opened Successfully
+2025-05-18 12:22:28,048 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch In/Out Page is Opened Successfully
+2025-05-18 12:22:29,184 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch In Data is Entered Successfully
+2025-05-18 12:22:29,271 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch In Button is Clicked Successfully
+2025-05-18 12:22:30,863 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Punch In Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:22:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="PunchOutTest" classname="Tests.TimeTest" time="5.604">
+    <system-out><![CDATA[2025-05-18 12:22:42,648 [TestNG-tests-1] INFO : Performance Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:22:43,863 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:22:44,298 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:22:44,300 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Start Login
+2025-05-18 12:22:46,514 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Login Completed
+2025-05-18 12:22:46,520 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Starting Punch Out Test
+2025-05-18 12:22:48,013 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Time Module is Opened Successfully
+2025-05-18 12:22:48,681 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Attendance Drop Down Menu is Opened Successfully
+2025-05-18 12:22:49,356 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch In/Out Page is Opened Successfully
+2025-05-18 12:22:50,474 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch Out Notes is Entered Successfully
+2025-05-18 12:22:50,553 [TestNG-tests-1] DEBUG: Time module ➡️ ✅ Punch Out Button is Clicked Successfully
+2025-05-18 12:22:52,121 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Punch out Test Completed Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="AddAPKTest" classname="Tests.PerformanceTest" time="4.674">
+    <system-out><![CDATA[2025-05-18 12:22:30,865 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:22:32,089 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:22:33,191 [TestNG-tests-1] INFO : ✅ Driver Setup Successfully
+2025-05-18 12:22:33,191 [TestNG-tests-1] INFO : ✅ Browser Opened Successfully Successfully
+2025-05-18 12:22:35,341 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:22:35,346 [TestNG-tests-1] INFO : Performance Module ➡️ 🚀🚀🚀 Start Login
+2025-05-18 12:22:37,973 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅✅✅ Login Completed
+2025-05-18 12:22:37,976 [TestNG-tests-1] INFO : Performance Module ➡️ 🚀🚀🚀 Starting Add APK Test
+2025-05-18 12:22:39,189 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ Performance Module is Opened Successfully
+2025-05-18 12:22:40,695 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ APK Configuration Page is Opened Successfully
+2025-05-18 12:22:42,612 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ KPI is Added Successfully
+2025-05-18 12:22:42,645 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅✅✅ Add KPI Test Completed Successfully
+]]></system-out>
+    <system-err><![CDATA[May 18, 2025 12:22:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+]]></system-err>
+  </testcase>
+  <testcase name="SearchForKPITest" classname="Tests.PerformanceTest" time="3.506">
+    <system-out><![CDATA[2025-05-18 12:22:52,123 [TestNG-tests-1] INFO : Time Module ➡️ 🚀🚀🚀 Login Out
+2025-05-18 12:22:53,287 [TestNG-tests-1] DEBUG: Time module ➡️ ✅✅✅ Logout Completed
+2025-05-18 12:22:53,465 [TestNG-tests-1] INFO : ✅ Browser Closed Successfully
+2025-05-18 12:22:53,899 [TestNG-tests-1] INFO : ✅ Navigated to the site successfully
+2025-05-18 12:22:53,902 [TestNG-tests-1] INFO : Performance Module ➡️ 🚀🚀🚀 Start Login
+2025-05-18 12:22:56,025 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅✅✅ Login Completed
+2025-05-18 12:22:56,029 [TestNG-tests-1] INFO : Performance Module ➡️ 🚀🚀🚀 Starting for KPI Test
+2025-05-18 12:22:57,234 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ Performance Module is Opened Successfully
+2025-05-18 12:22:58,704 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ APK Configuration Page is Opened Successfully
+2025-05-18 12:22:59,531 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅ Search is Done Successfully
+2025-05-18 12:22:59,531 [TestNG-tests-1] DEBUG: Performance module ➡️ ✅✅✅ Searchfor KPI KPI Test Completed Successfully
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -5,6 +5,8 @@ import Pages.AdminPage;
 import Pages.EditUserPage;
 import Pages.LogInOutPage;
 
+import com.github.javafaker.Faker;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -12,6 +14,8 @@ import java.time.Duration;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class AdminTest extends BaseTest {
+
+
 
     @Test
     public void addUserTestCase() throws InterruptedException {
@@ -22,12 +26,19 @@ public class AdminTest extends BaseTest {
         logObj.Login("Admin","admin123");
         AdminPage adminObj = new AdminPage(driver);
 
+        Faker faker = new Faker();
+        String userNmae = faker.name().firstName();
+        String userNmae2 = faker.name().lastName();
+
+
         adminObj.clickOnAdminButton();
         adminObj.cliCkOnAddButton();
         adminObj.selectUserRole();
         adminObj.selectStatusAsEnabled();
         adminObj.setEmployeeName();
-        adminObj.setUserName("yomna36653");//////// edit it
+        adminObj.setUserName(userNmae+userNmae2);//////// edit it
+        Thread.sleep(Duration.ofSeconds(10));
+
         adminObj.setEmployeePassword("Aya@12345");
         adminObj.setEmployeeConfirmPassword("Aya@12345");
         adminObj.clickOnSaveButton();
@@ -76,6 +87,13 @@ public class AdminTest extends BaseTest {
 
         logger.debug("Admin module ➡\uFE0F ✅✅✅ Delete User Test Completed Successfully");
 
+    }
+    @AfterMethod
+    public void Logout(){
+        logger.info("Time Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Login Out");
+        LogInOutPage login = new LogInOutPage(driver);
+        login.Logout();
+        logger.debug("Time module ➡\uFE0F ✅✅✅ Logout Completed");
     }
 
 }

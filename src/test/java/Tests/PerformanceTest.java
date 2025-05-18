@@ -34,7 +34,7 @@ public class PerformanceTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void SearchforKPITest() throws InterruptedException {
+    public void SearchForKPITest() throws InterruptedException {
         logger.info("Performance Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting for KPI Test");
         PerformancePage performance = new PerformancePage(driver);
         performance.OpenPerformanceModule();

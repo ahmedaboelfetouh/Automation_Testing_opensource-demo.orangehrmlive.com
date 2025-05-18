@@ -18,7 +18,7 @@ public class BuzzPage extends BasePage {
     private WebElement postButton;
     @FindBy(id = "heart")
     private WebElement likePost;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[1]")
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[1]")
     private WebElement commentIcon;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[4]/div/form/div/div[2]/input")
     private WebElement commentTextField;
@@ -28,6 +28,14 @@ public class BuzzPage extends BasePage {
     private WebElement deleteCommentButton;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[4]/div[2]/div[2]/div[2]/p[1]")
     private WebElement likComment;
+    @FindBy(css = "#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-footer > button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
+    private WebElement deleteButtonAlert;
+    public void clickOnDeleteButtonAlert(){
+        BasePage.WaitingForElementToBeClickable(deleteButtonAlert);
+        deleteButtonAlert.click();
+        logger.debug("Delete User In Admin Module: Click On Delete Button Alert");
+    }
+
     public void clickOnBuzzTab(){
         BasePage.WaitingForElementToBeVisible(buzzTab);
         buzzTab.click();

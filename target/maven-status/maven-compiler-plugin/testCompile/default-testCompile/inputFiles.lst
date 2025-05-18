@@ -1,7 +1,27 @@
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\Pages\LoginPage.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\runner\TestRunner.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\hook\Hooks.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\stepdefinitions\LoginSteps.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\Tests\LoginTest.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\Tests\BaseTest.java
-C:\Users\Mahmoud Khalaf\Downloads\OrangeHRM\src\test\java\Pages\BasePage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\DashboardPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\PerformancePage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\BuzzTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\MyInfoPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\ClaimTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\TimeTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\PIMPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Base\BasePage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\TimePage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\PIMTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Base\BaseTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\BuzzPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\MyInfoPageTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\LeavePage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\AdminTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\PerformanceTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\DashboardTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\AdminPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\ClaimPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\RecruitmentPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\LeavePageTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\AddUserPIMPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\EditUserPIMPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\RecruitmentPageTest.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\EditUserPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Pages\LogInOutPage.java
+C:\Users\am614\IdeaProjects\Automation_Testing_opensource-demo.orangehrmlive.com\src\test\java\Tests\LoginTest.java

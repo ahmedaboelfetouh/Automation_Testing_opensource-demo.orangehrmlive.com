@@ -34,7 +34,7 @@ public class ClaimPage extends BasePage {
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div > input")
     WebElement EmployeeName;
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Admin  Admin123']")
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Aya Ali Abdo']")
     WebElement EmployeeNameSelection;
 
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(3) > div > div > div > div:nth-child(2) > textarea")
@@ -74,7 +74,7 @@ public class ClaimPage extends BasePage {
 
     public void EnterAssignClaimData(){
         WaitingForElementToBeVisible(EmployeeName);
-        EmployeeName.sendKeys("Admin");
+        EmployeeName.sendKeys("Aya");
         WaitingForElementToBeVisible(EmployeeNameSelection);
         EmployeeNameSelection.click();
         WaitingForElementToBeVisible(EventDropDownList);
