@@ -10,13 +10,23 @@ import java.util.List;
 
 public class PIMPage extends BasePage {
 
-    public PIMPage(WebDriver driver) {
-        super(driver);
-    }
-
     private String searchData;
     @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(2) > a")
     private WebElement pimButtom;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
+    private WebElement addUserButton;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
+    private WebElement employeeNameSearch;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div")
+    private List<WebElement> resultEmployees;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
+    private WebElement searchButton;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(9) > div > button:nth-child(1)")
+    private WebElement editButton;
+
+    public PIMPage(WebDriver driver) {
+        super(driver);
+    }
 
     public void clickOnPIMButton(){
         BasePage.WaitingForElementToBeVisible(pimButtom);
@@ -24,24 +34,11 @@ public class PIMPage extends BasePage {
         logger.debug("PIM Module: Click On PIM Button");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
-    private WebElement addUserButton;
-
     public void clickOnAddUserButton(){
         BasePage.WaitingForElementToBeVisible(addUserButton);
         addUserButton.click();
         logger.debug("Add User In PIM Module: Click On Add User Button");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
-    private WebElement employeeNameSearch;
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div")
-    private List<WebElement> resultEmployees;
-
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
-    private WebElement searchButton;
 
     public void setEmployeeNameSearch(String value) {
         searchData = value.toLowerCase();
@@ -71,9 +68,6 @@ public class PIMPage extends BasePage {
         searchButton.click();
         logger.debug("Search About User PIM Module: Click On Search Button");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(9) > div > button:nth-child(1)")
-    private WebElement editButton;
 
     public void clickOnEditButton(){
         BasePage.WaitingForElementToBeClickable(editButton);

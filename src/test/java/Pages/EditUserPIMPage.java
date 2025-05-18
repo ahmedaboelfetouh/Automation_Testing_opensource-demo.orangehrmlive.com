@@ -12,12 +12,58 @@ import java.time.Duration;
 
 public class EditUserPIMPage extends BasePage {
 
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(1) > div:nth-child(2) > input")
+    private WebElement firstNameUser;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(2) > div:nth-child(2) > input")
+    private WebElement middleNameUser;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(3) > div:nth-child(2) > input")
+    private WebElement lastNameUser;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > input")
+    private WebElement idUser;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > input")
+    private WebElement otherIdUser;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > input")
+    private WebElement driverLicenseNumber;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div > div > input")
+    private WebElement licenceExpiryDate;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
+    private WebElement dropdownOfNationality;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Afghan']")
+    private WebElement afghan;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
+    private WebElement dropdownOfMatrialStatus;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Single']")
+    private WebElement single;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
+    private WebElement dateOfBirth;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div.--gender-grouped-field > div:nth-child(2) > div:nth-child(2) > div > label")
+    private  WebElement femaleGender;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div.--gender-grouped-field > div:nth-child(1) > div:nth-child(2) > div > label")
+    private  WebElement maleGender;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div.oxd-form-actions > button")
+    private WebElement personalInfoSaveButton;
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationPersonalInfo;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
+    private WebElement dropdownOfBloodType;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='A+']")
+    private WebElement bloodType;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-actions > button")
+    private WebElement customFieldSaveButton;
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationCustomField;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > div > button")
+    private WebElement addButton;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div > form > div:nth-child(1) > div > div > div > div:nth-child(2) > input")
+    private WebElement fileInput;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
+    private WebElement addAttachmentSaveButton;
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacationAddAttachment;
+
     public EditUserPIMPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(1) > div:nth-child(2) > input")
-    private WebElement firstNameUser;
 
     public void setFirstNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(firstNameUser);
@@ -27,9 +73,6 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set First Name User");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(2) > div:nth-child(2) > input")
-    private WebElement middleNameUser;
-
     public void setMiddleNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(middleNameUser);
         middleNameUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -37,9 +80,6 @@ public class EditUserPIMPage extends BasePage {
         middleNameUser.sendKeys(name);
         logger.debug("Edit User IN PIM Module: Set Middle Name User");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(3) > div:nth-child(2) > input")
-    private WebElement lastNameUser;
 
     public void setLastNameUser(String name) {
         BasePage.WaitingForElementToBeVisible(lastNameUser);
@@ -49,9 +89,6 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set Last Name User");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > input")
-    private WebElement idUser;
-
     public void setIdUser(String id){
         BasePage.WaitingForElementToBeVisible(idUser);
         idUser.sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -59,9 +96,6 @@ public class EditUserPIMPage extends BasePage {
         idUser.sendKeys(id);
         logger.debug("Edit User IN PIM Module: Set User ID");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > input")
-    private WebElement otherIdUser;
 
     public void setOtherIdUser(String otherid){
         BasePage.WaitingForElementToBeVisible(otherIdUser);
@@ -71,9 +105,6 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set Other ID'S");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > input")
-    private WebElement driverLicenseNumber;
-
     public void setDriverLicenseNumber(String number){
         BasePage.WaitingForElementToBeVisible(driverLicenseNumber);
         driverLicenseNumber.sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -81,10 +112,6 @@ public class EditUserPIMPage extends BasePage {
         driverLicenseNumber.sendKeys(number);
         logger.debug("Edit User IN PIM Module: Set Driver License Number");
     }
-
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div > div > input")
-    private WebElement licenceExpiryDate;
 
     public void setLicenceExpiryDate(String date){
         BasePage.WaitingForElementToBeVisible(licenceExpiryDate);
@@ -94,25 +121,12 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set Licence Expiry Date");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
-    private WebElement dropdownOfNationality;
-
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Afghan']")
-    private WebElement afghan;
-
     public void clickOnDropdownOfNationality(){
         BasePage.WaitingForElementToBeClickable(dropdownOfNationality);
         dropdownOfNationality.click();
         afghan.click();
         logger.debug("Edit User IN PIM Module: Click On Dropdown Of Nationality");
     }
-
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
-    private WebElement dropdownOfMatrialStatus;
-
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Single']")
-    private WebElement single;
 
     public void clickOnDropdownOfMatrialStatus(){
         BasePage.WaitingForElementToBeClickable(dropdownOfMatrialStatus);
@@ -121,10 +135,6 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Click On Dropdown Of Matrial Status");
     }
 
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
-    private WebElement dateOfBirth;
-
     public void setDateOfBirth(String date){
         BasePage.WaitingForElementToBeVisible(dateOfBirth);
         dateOfBirth.sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -132,9 +142,6 @@ public class EditUserPIMPage extends BasePage {
         dateOfBirth.sendKeys(date);
         logger.debug("Edit User IN PIM Module: Set Date Of Birth");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div.--gender-grouped-field > div:nth-child(2) > div:nth-child(2) > div > label")
-    private  WebElement femaleGender;
 
     public void setFemaleGender(){
         BasePage.WaitingForElementToBeClickable(femaleGender);
@@ -145,10 +152,6 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set Female Gender");
     }
 
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div.--gender-grouped-field > div:nth-child(1) > div:nth-child(2) > div > label")
-    private  WebElement maleGender;
-
     public void setMaleGender(){
         BasePage.WaitingForElementToBeClickable(maleGender);
         if(!maleGender.isSelected()){
@@ -157,29 +160,17 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Set Male Gender");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > form > div.oxd-form-actions > button")
-    private WebElement personalInfoSaveButton;
-
     public void clickOnPersonalInfoSaveButton(){
         BasePage.WaitingForElementToBeClickable(personalInfoSaveButton);
         personalInfoSaveButton.click();
         logger.debug("Edit User IN PIM Module: Click On Personal Info Save Button");
     }
 
-    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
-    private WebElement saveVerifacationPersonalInfo;
-
     public String checkSaveVerificationPersonalInfo(){
         BasePage.WaitingForElementToBeVisible(saveVerifacationPersonalInfo);
         logger.debug("Edit User In PIM Module: Verifiaction of Save Message In Personal Info");
         return saveVerifacationPersonalInfo.getText();
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i")
-    private WebElement dropdownOfBloodType;
-
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='A+']")
-    private WebElement bloodType;
 
     public void clickOnDropdownOfBloodType(){
         BasePage.WaitingForElementToBeClickable(dropdownOfBloodType);
@@ -188,17 +179,11 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Click On Dropdown Of Blood Type");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-actions > button")
-    private WebElement customFieldSaveButton;
-
     public void clickOnCustomFieldSaveButton(){
         BasePage.WaitingForElementToBeClickable(customFieldSaveButton);
         customFieldSaveButton.click();
         logger.debug("Edit User IN PIM Module: Click On Custom Field Save Button");
     }
-
-    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
-    private WebElement saveVerifacationCustomField;
 
     public String checkSaveVerificationCustomField(){
         BasePage.WaitingForElementToBeVisible(saveVerifacationCustomField);
@@ -206,19 +191,12 @@ public class EditUserPIMPage extends BasePage {
         return saveVerifacationCustomField.getText();
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div.orangehrm-horizontal-padding.orangehrm-vertical-padding > div > button")
-    private WebElement addButton;
-
     public void clickOnAddButton(){
         BasePage.WaitingForElementToBeClickable(addButton);
         addButton.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         logger.debug("Edit User IN PIM Module: Click On Add File Button");
     }
-
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div > form > div:nth-child(1) > div > div > div > div:nth-child(2) > input")
-    private WebElement fileInput;
 
     public void uploadFile(String filePath) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -228,27 +206,17 @@ public class EditUserPIMPage extends BasePage {
         logger.debug("Edit User IN PIM Module: Upload File");
     }
 
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-attachment > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
-    private WebElement addAttachmentSaveButton;
-
     public void clickOnAddAttachmentSaveButton(){
         BasePage.WaitingForElementToBeClickable(addAttachmentSaveButton);
         addAttachmentSaveButton.click();
         logger.debug("Edit User IN PIM Module: Click On Add Attachment Save Button");
     }
 
-
-    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
-    private WebElement saveVerifacationAddAttachment;
-
     public String checkSaveVerificationaddAttachment(){
         BasePage.WaitingForElementToBeVisible(saveVerifacationAddAttachment);
         logger.debug("Edit User In PIM Module: Verifiaction of Save Message In Adding Attachment");
         return saveVerifacationAddAttachment.getText();
     }
-
-
 }
 
 

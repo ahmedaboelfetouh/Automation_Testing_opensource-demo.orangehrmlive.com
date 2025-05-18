@@ -36,11 +36,11 @@ public class PIMTest extends BaseTest {
         addUserPIMObj.setFirstName("Aya");
         addUserPIMObj.setMiddleName("Ali");
         addUserPIMObj.setLastName("Abdo");
-        addUserPIMObj.setEmplyeeId(userId);/////edit it
+        addUserPIMObj.setEmplyeeId(userId);
 
         addUserPIMObj.createLoginDetailsFun();
 
-        addUserPIMObj.setUserName(userNmae+userNmae2);/////edit it
+        addUserPIMObj.setUserName(userNmae+userNmae2);
         Thread.sleep(Duration.ofSeconds(10));
         addUserPIMObj.enableButton();
         addUserPIMObj.setEmployeePassword("aayyaa123");
@@ -51,7 +51,6 @@ public class PIMTest extends BaseTest {
 
         logger.debug("PIM module ➡\uFE0F ✅✅✅ Add User Test Completed Successfully");
     }
-
 
     @Test
     public void searchForEmployee(){
@@ -70,7 +69,6 @@ public class PIMTest extends BaseTest {
         logger.debug("PIM module ➡\uFE0F ✅✅✅ Search User Test Completed Successfully");
     }
 
-
     @Test
     public void editUserTestCase(){
         logger.info("PIM Module ➡\uFE0F \uD83D\uDE80\uD83D\uDE80\uD83D\uDE80 Starting Edit User Test");
@@ -88,7 +86,7 @@ public class PIMTest extends BaseTest {
         editPageObj.setFirstNameUser("Aya");
         editPageObj.setMiddleNameUser("Ali");
         editPageObj.setLastNameUser("AbdElaal");
-        editPageObj.setIdUser(userId);//////// edit it
+        editPageObj.setIdUser(userId);
         editPageObj.setOtherIdUser("322");
         editPageObj.setDriverLicenseNumber("222");
         editPageObj.setLicenceExpiryDate("2027-07-02");
@@ -99,18 +97,10 @@ public class PIMTest extends BaseTest {
         editPageObj.clickOnPersonalInfoSaveButton();
         assertEquals("Success",editPageObj.checkSaveVerificationPersonalInfo());
 
-
         editPageObj.clickOnDropdownOfBloodType();
         editPageObj.clickOnCustomFieldSaveButton();
         assertEquals("Success",editPageObj.checkSaveVerificationCustomField());
 
-
-//        editPageObj.clickOnAddButton();
-//        editPageObj.uploadFile("C://Users/Aya Ali/Downloads/Aya Ali Cover Letter.pdf");
-//        editPageObj.clickOnAddAttachmentSaveButton();
-
         logger.debug("PIM module ➡\uFE0F ✅✅✅ Edit User Test Completed Successfully");
     }
-
-
 }

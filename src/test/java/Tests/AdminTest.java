@@ -30,13 +30,12 @@ public class AdminTest extends BaseTest {
         String userNmae = faker.name().firstName();
         String userNmae2 = faker.name().lastName();
 
-
         adminObj.clickOnAdminButton();
         adminObj.cliCkOnAddButton();
         adminObj.selectUserRole();
         adminObj.selectStatusAsEnabled();
         adminObj.setEmployeeName();
-        adminObj.setUserName(userNmae+userNmae2);//////// edit it
+        adminObj.setUserName(userNmae+userNmae2);
         Thread.sleep(Duration.ofSeconds(10));
 
         adminObj.setEmployeePassword("Aya@12345");
@@ -46,7 +45,6 @@ public class AdminTest extends BaseTest {
 
         logger.debug("Admin module ➡\uFE0F ✅✅✅ Add User Test Completed Successfully");
     }
-
 
     @Test
     public void editUserTestCase() throws InterruptedException {
@@ -67,9 +65,7 @@ public class AdminTest extends BaseTest {
         assertEquals("Success",editObj.checkSaveVerification());
 
         logger.debug("Admin module ➡\uFE0F ✅✅✅ Edit User Test Completed Successfully");
-
     }
-
 
     @Test
     public void deleteUserTestCase() throws InterruptedException {
@@ -86,9 +82,6 @@ public class AdminTest extends BaseTest {
         assertEquals("Success",adminObj.checkDeleteMessageVerification());
 
         logger.debug("Admin module ➡\uFE0F ✅✅✅ Delete User Test Completed Successfully");
-
     }
-
-
 }
 

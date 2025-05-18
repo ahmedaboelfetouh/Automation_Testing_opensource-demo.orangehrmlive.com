@@ -29,9 +29,6 @@ public class LeavePageTest extends BaseTest {
         leaveObj.verifySearchResults();
 
         logger.debug("Leave module ➡\uFE0F ✅✅✅ Search Leave Test Completed Successfully");
-
-
     }
-
 }
 

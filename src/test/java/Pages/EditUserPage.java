@@ -13,17 +13,32 @@ import java.time.Duration;
 
 public class EditUserPage extends BasePage {
 
+    @FindBy(xpath = "//label[text()='User Role']/following::div[contains(@class,'oxd-select-text-input')][1]")
+    private WebElement userRoleDropdown;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Admin']")
+    private WebElement userRoleOptionAdmin;
+    @FindBy(xpath = "//label[text()='Status']/following::div[contains(@class, 'oxd-select-text-input')][1]")
+    private WebElement statusDropdown;
+    @FindBy(xpath = "//div[@role='listbox']//span[text()='Enabled']")
+    private WebElement statusOptionEnabled;
+    @FindBy(xpath = "//input[@placeholder=\"Type for hints...\"]")
+    private WebElement employeeName;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input")
+    private  WebElement userName;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[5]/div/div[2]/div/label")
+    private WebElement checkbox;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input")
+    private WebElement employeePassword;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div:nth-child(2) > div > div:nth-child(2) > input")
+    private WebElement employeeConfirmPassword;
+    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
+    private WebElement saveButton;
+    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
+    private WebElement saveVerifacation;
 
     public EditUserPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//label[text()='User Role']/following::div[contains(@class,'oxd-select-text-input')][1]")
-    private WebElement userRoleDropdown;
-
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Admin']")
-    private WebElement userRoleOptionAdmin;
-
 
     public void selectUserRole() {
         BasePage.WaitingForElementToBeVisible(userRoleDropdown);
@@ -32,20 +47,11 @@ public class EditUserPage extends BasePage {
         logger.debug("Edit User In Admin Module: Select User Role");
     }
 
-    @FindBy(xpath = "//label[text()='Status']/following::div[contains(@class, 'oxd-select-text-input')][1]")
-    private WebElement statusDropdown;
-    @FindBy(xpath = "//div[@role='listbox']//span[text()='Enabled']")
-    private WebElement statusOptionEnabled;
-
     public void selectStatusAsEnabled() {
         statusDropdown.click();
         statusOptionEnabled.click();
         logger.debug("Edit User In Admin Module: Select Status");
     }
-
-
-    @FindBy(xpath = "//input[@placeholder=\"Type for hints...\"]")
-    private WebElement employeeName;
 
     public void setEmployeeName(String name){
         BasePage.WaitingForElementToBeVisible(employeeName);
@@ -53,17 +59,11 @@ public class EditUserPage extends BasePage {
         logger.debug("Edit User In Admin Module: Set Employee Name");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input")
-    private  WebElement userName;
-
     public void setUserName(String name){
         BasePage.WaitingForElementToBeVisible(userName);
         userName.sendKeys(name);
         logger.debug("Edit User In Admin Module: Set Admin Name");
     }
-
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[5]/div/div[2]/div/label")
-    private WebElement checkbox;
 
     public void clickOnCheckbox(){
         BasePage.WaitingForElementToBeClickable(checkbox);
@@ -71,29 +71,17 @@ public class EditUserPage extends BasePage {
         logger.debug("Edit User In Admin Module: Click On Password Checkbox");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input")
-    private WebElement employeePassword;
-
     public void setEmployeePassword(String password){
         BasePage.WaitingForElementToBeVisible(employeePassword);
         employeePassword.sendKeys(password);
         logger.debug("Edit User In Admin Module: Set Admin Password");
     }
 
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row.user-password-row > div > div:nth-child(2) > div > div:nth-child(2) > input")
-    private WebElement employeeConfirmPassword;
-
     public void setEmployeeConfirmPassword(String password){
         BasePage.WaitingForElementToBeVisible(employeeConfirmPassword);
         employeeConfirmPassword.sendKeys(password);
         logger.debug("Edit User In Admin Module: Set Admin Confirmation Password");
     }
-
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
-    private WebElement saveButton;
-
-    @FindBy(css = "#oxd-toaster_1 > div > div.oxd-toast-start > div.oxd-toast-content.oxd-toast-content--success > p.oxd-text.oxd-text--p.oxd-text--toast-title.oxd-toast-content-text")
-    private WebElement saveVerifacation;
 
     public String checkSaveVerification(){
         BasePage.WaitingForElementToBeVisible(saveVerifacation);
@@ -106,6 +94,4 @@ public class EditUserPage extends BasePage {
         saveButton.submit();
         logger.debug("Edit User In Admin Module: Click On Save Button");
     }
-
-
 }
